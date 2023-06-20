@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn&family=Poppins&display=swap");
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+.conteiner {
+  @apply flex flex-col items-center bg-red-700;
+}
+
+.formulario {
+  font-family: "Michroma", sans-serif;
+  @apply flex flex-col h-[100vh] items-center border-2 w-full;
+  &__titulo {
+    @apply text-center font-bold text-2xl text-azulMarinho mt-8 p-4;
+    @media screen and (min-width: $tablet) {
+      @apply text-4xl;
+    }
+  }
+  &__textos {
+    @apply text-base m-5 w-[75%] text-center;
+  }
+  &__opcoes {
+    @apply flex flex-col items-center;
+  }
+}
+
+.presenca {
+  @apply my-6 text-xl text-center font-bold text-green-600;
+}
+
+/* Estilos para o modo escuro */
+// @media (prefers-color-scheme: dark) {
+//   .conteiner {
+//     @apply bg-black;
+//   }
+//   .formulario__titulo {
+//     @apply text-white;
+//   }
+//   .formulario__textos {
+//     @apply text-white;
+//   }
+//   .formulario__opcoes {
+//     @apply bg-gray-900;
+//   }
+//   .presenca {
+//     @apply text-white;
+//   }
+// }

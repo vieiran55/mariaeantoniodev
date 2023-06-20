@@ -1,0 +1,15 @@
+.conteiner{
+  @apply h-[70vw] flex flex-col w-full items-center mt-7 justify-center;
+}
+
+.botoesLista{
+  @apply flex flex-col;
+}
+
+.botaoAdicionar{
+  @apply self-end;
+}
+
+.titulo{
+  @apply text-center text-2xl text-blue-700 font-bold;
+}

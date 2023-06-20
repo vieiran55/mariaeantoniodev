@@ -1,0 +1,106 @@
+.corpo {
+  margin-bottom: calc(40% + 8px);
+  @apply flex flex-col w-full h-max items-center;
+
+  &__cartao {
+    @apply border-solid rounded-lg mt-4 border-black border;
+  }
+
+  &__cartaoSuperior {
+    width: 360px;
+    height: 100%;
+    background: rgb(210, 225, 243);
+    background: linear-gradient(
+      185deg,
+      rgba(210, 225, 243, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    @apply flex flex-col items-center rounded-lg;
+
+    &__imagem1 {
+      @apply w-[80%] h-5/6;
+    }
+
+    &__imagem2 {
+      @apply -mt-16;
+    }
+
+    &__botao {
+      @apply bg-green-600;
+    }
+  }
+
+  &__cartaoInferior {
+    @apply bg-[#ffffff] w-full rounded-lg;
+
+    &__casal {
+      background-image: url("../../images/ramos.png"),
+        url("../../images/aliancas.png");
+      background-repeat: no-repeat;
+      background-position: bottom, top;
+      background-size: 70%, 15%;
+      font-family: "Gwendolyn", cursive;
+      @apply self-start py-6 px-6 text-4xl text-black font-bold text-center h-36 flex flex-col justify-center items-center;
+    }
+
+    &__text {
+      font-family: "Gwendolyn", cursive;
+      @apply self-start text-3xl text-black text-center flex flex-col justify-center items-center;
+    }
+  }
+}
+
+.corpo__cartaoBotoes {
+  width: 360px;
+  @apply flex flex-row justify-between mt-4;
+
+  &__confirma {
+    font-family: "Poppins", sans-serif;
+    @apply mt-4 h-14 w-40 text-sm flex flex-col justify-center text-center;
+  }
+
+  &__Lista {
+    font-family: "Poppins", sans-serif;
+    @apply mt-4 h-14 w-40 text-sm;
+  }
+}
+
+// @media (prefers-color-scheme: light) {
+//   .corpo {
+//     @apply bg-white;
+//   }
+//   .corpo__cartaoSuperior {
+//     @apply bg-gray-200;
+//   }
+//   .corpo__cartaoInferior {
+//     @apply bg-white;
+//   }
+//   .corpo__casal,
+//   .corpo__text {
+//     @apply text-black;
+//   }
+// }
+
+
+
+// /* Estilos para o modo escuro */
+// @media (prefers-color-scheme: dark) {
+//   .corpo {
+//     @apply bg-black;
+//   }
+//   .corpo__cartaoSuperior {
+//     @apply bg-gray-800;
+//     &__imagem2 {
+//       filter: brightness(1) invert(1);
+//     }
+//   }
+//   .corpo__cartaoInferior {
+//     @apply bg-gray-900;
+//   }
+//   .corpo__casal {
+//     @apply text-white;
+//   }
+//   .corpo__text {
+//     @apply text-white;
+//   }
+// }

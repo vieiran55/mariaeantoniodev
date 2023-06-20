@@ -1,0 +1,122 @@
+@import "../../../styles/variaveis";
+@import "../../../styles/breakpoints";
+
+@mixin card($status, $status1) {
+  background-color: $status;
+  background-image: linear-gradient(0deg, $status 0%, $status1 39%);
+  transition: box-shadow 0.7s ease;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  @apply w-full h-44 my-1 mx-8;
+  @media screen and (min-width: 400px) {
+    @apply w-[410px] h-44;
+  }
+}
+
+.corpo__disponivel {
+  @include card(#fdf7c3, #ffdeb4);
+}
+
+.corpo__indisponivel {
+  @include card(grey, darkgrey);
+}
+
+.corpo__indisponivel span {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  top: 8px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.corpo__indisponivel span::before {
+  content: "indisponível";
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, red 51%, #ff7053 100%);
+  transform: rotate(-11deg) translateY(-10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+}
+
+.corpo__lista__item {
+  z-index: 9;
+  @apply text-center flex flex-col py-1 items-center ;
+  @media screen and (min-width: 400px) {
+    @apply w-[400px] h-full;
+  }
+  &__icon{
+    @apply hidden;
+  }
+  &__imagem {
+    @apply w-20 h-20 p-2;
+  }
+  &__titulo {
+    @apply text-lg font-bold text-ateneoBlue;
+  }
+  &__conteiner{
+    @apply flex flex-row items-center h-[80px] w-full;
+  }
+  &__imagemPreco{
+    @apply text-sm;
+  }
+  &__preco {
+    @apply text-xl text-ateneoBlue font-bold text-red-600;
+  }
+  &__confirmar {
+    @apply my-1 w-24 h-16 inline-block px-2 py-2 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out ;
+  }
+  &__acoes {
+    @apply flex flex-col mt-2 w-10/12 text-xs mx-4 mb-3;
+    &__link {
+      text-transform: uppercase;
+      border: transparent;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+      color: white;
+      border-radius: 4px;
+      @apply bg-[#FF6000] flex items-center my-1 text-center w-full;
+    }
+    &__pix {
+      text-transform: uppercase;
+      border: transparent;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      color: white;
+      border-radius: 4px;
+      @apply bg-[#FF6000] flex items-center text-center w-full;
+    }
+  }
+}
+
+
+// @media (prefers-color-scheme: dark) {
+//   .corpo__disponivel {
+//     @include card(rgb(2,0,36), rgba(9,9,121,1));
+//     box-shadow: none;
+//   }
+
+//   .corpo__indisponivel {
+//     box-shadow: none;
+//   }
+//   .corpo__disponivel::after {
+//     background: rgb(2,0,36);
+//     background: linear-gradient(167deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 11%, rgba(0,212,255,1) 77%);
+//   }
+
+//   .corpo__indisponivel span::before {
+//     box-shadow: none;
+//   }
+// }
