@@ -156,8 +156,8 @@ export default function NovoPresente(props: Props) {
           Foto:
           <input
             className={estilos.formularioInputs}
-            type="file"
             value={foto}
+            type="text"
             onChange={handleFotoChange}
           />
         </label>

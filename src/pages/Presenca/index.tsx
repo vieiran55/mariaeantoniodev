@@ -31,6 +31,7 @@ interface Convidado {
 export default function Presenca() {
   const [convidados, setConvidados] = useState<Convidado[]>([]);
   const [nomeSelecionado, setNomeSelecionado] = useState("");
+  const [email, setEmail] = useState("");
   const [convidadoSelecionado, setConvidadoSelecionado] =
     useState<Convidado | null>(null);
   const [mostrarOpcoes, setMostrarOpcoes] = useState(false);
@@ -45,6 +46,7 @@ export default function Presenca() {
   const isConfirmado = convidadoSelecionado?.confirmado || false;
   const [nomePessoaSelecionado, setNomePessoaSelecionado] =
     useState<string>("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
     axios
@@ -64,6 +66,7 @@ export default function Presenca() {
         nome: convidadoSelecionado.nome,
         qtd: nomesPessoasAdicionais.length + 1,
         confirmado: true,
+        email: email,
         pessoas: [convidadoSelecionado.pessoas[0], ...nomesPessoasAdicionais],
       };
 
@@ -78,6 +81,74 @@ export default function Presenca() {
         })
         .catch((error) => {
           console.error("Erro ao confirmar presença:", error);
+        });
+
+      const destinatario = email; // Substitua pelo endereço de email desejado
+      const casal = "sargento355@gmail.com";
+      const assunto = "CASAMENTO MARIA E ANTONIO - CONFIRMAÇÃO DE PRESENÇA";
+      const corpo = `
+        Querido(a) ${nomeSelecionado},
+    
+        Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
+    
+        Com carinho,
+        Maria e Antonio
+    
+        ------------------------------
+        
+        Dados do Cadastro:
+    
+        - Nome: ${nomeSelecionado}
+        - E-mail: ${email}
+        - Pessoas que irão com você: ${nomesPessoasAdicionais}
+
+    
+        ------------------------------
+    
+      `;
+
+      const corpo2 = `
+      PresenÇA Reservada
+      ------------------------------
+      
+      Dados do Cadastro:
+    
+    
+      - Nome: ${nomeSelecionado}
+      - E-mail: ${email}
+      - Pessoas que irão com você: ${nomesPessoasAdicionais}
+  
+      ------------------------------
+    
+    `;
+
+      axios
+        .get("https://cvtrsy.online/enviar-email", {
+          params: {
+            destinatario: destinatario,
+            assunto: assunto,
+            corpo: corpo,
+          },
+        })
+        .then((response1) => {
+          console.log(response1.data);
+          // Lógica adicional após o envio do primeiro email com sucesso
+
+          return axios.get("https://cvtrsy.online/enviar-email", {
+            params: {
+              destinatario: casal,
+              assunto: assunto,
+              corpo: corpo2,
+            },
+          });
+        })
+        .then((response2) => {
+          console.log(response2.data);
+          // Lógica adicional após o envio do segundo email com sucesso
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar o email:", error);
+          // Lógica de tratamento de erro
         });
     }
   };
@@ -196,6 +267,18 @@ export default function Presenca() {
             familia irão com você ao evento.
           </h2>
           <FormControl sx={{ width: "300px", margin: "10px" }}>
+            <TextField
+              label="Digite seu Email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              fullWidth
+              type="email"
+              error={formSubmitted && email.trim() === ""}
+              helperText={
+                formSubmitted && email.trim() === "" ? "Digite seu email" : ""
+              }
+              margin="normal"
+            />
             <InputLabel id="outlined-select-currency">
               Além de você, quantas pessoas irão?
             </InputLabel>

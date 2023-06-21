@@ -11,9 +11,9 @@
   place-items: center;
   overflow: hidden;
   box-shadow: 0 0 0 1px black; /* Adicione a borda aqui */
-  @apply w-64 h-[24rem];
+  @apply w-64 h-[24rem] flex;
   @media screen and (min-width: 900px) {
-    @apply w-80 h-[28rem];
+    @apply w-80 h-[28rem] flex;
   }
 }
 

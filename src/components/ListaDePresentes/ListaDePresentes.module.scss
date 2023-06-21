@@ -4,13 +4,13 @@
 .conteiner{
   @apply flex flex-row items-center justify-center w-11/12;
   @media screen and (min-width: 900px) {
-    @apply w-[650px]
+    @apply w-[650px] justify-center;
   }
   @media screen and (min-width: 1060px) {
-    @apply w-[960px]
+    @apply w-[960px] justify-center;
   }
   @media screen and (min-width: 1400px) {
-    @apply w-[1280px]
+    @apply w-[1280px] justify-center;
   }
 }
 

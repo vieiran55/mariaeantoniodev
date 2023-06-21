@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 import classNames from "classnames";
+import logoCasal from "../../images/gabieantoniologo.png";
 
 interface FormData {
   nome: string;
@@ -56,6 +57,8 @@ export default function PresenteEscolhido(props: Props) {
   const [email, setEmail] = useState("");
   const [presente, setPresente] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const pix = "https://nubank.com.br/pagar/xw2h0/YToiVhZ4ZT";
+  const wpp = "https://wa.me/5561999981928";
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -64,9 +67,6 @@ export default function PresenteEscolhido(props: Props) {
       [name]: value,
     }));
   };
-
- 
-  
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     // console.log("Valores capturados:", titulo, link, status, preco, foto);
@@ -84,11 +84,106 @@ export default function PresenteEscolhido(props: Props) {
       email: email,
       presente: nomePresenteEscolhido,
     });
-    // código para enviar dados para o servidor
+    //código para enviar dados para o servidor
     atualizarDados(idPresenteEscolhido, {
       status: "indisponivel",
     });
+
+    const destinatario = email; // Substitua pelo endereço de email desejado
+    const casal = "gabrieladourado10@hotmail.com";
+    const assunto = "CASAMENTO MARIA E ANTONIO - CONFIRMAÇÃO DE PRESENTE";
+    const corpo = `
+    Querido(a) ${nome},
+
+    Muito obrigado por escolher nos presentear! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
+
+    Com carinho,
+    Maria e Antonio
+
+    ------------------------------
+    
+    Dados do Cadastro:
+
+    - Nome: ${nome}
+    - Telefone: ${parseFloat(telefone)}
+    - E-mail: ${email}
+    - Presente: ${nomePresenteEscolhido}
+
+
+    Entre em contato com a gente: ${wpp}
+    Clique neste link para acessar os dados para Pix: ${pix}
+    Clique neste link para acessar o Presente: ${pix}
+
+    ------------------------------
+
+  `;
+
+    const corpo2 = `
+  Presente Reservado
+  ------------------------------
+  
+  Dados do Cadastro:
+
+  - Nome: ${nome}
+  - Telefone: ${parseFloat(telefone)}
+  - E-mail: ${email}
+  - Presente: ${nomePresenteEscolhido}
+  ------------------------------
+
+`;
+
+    axios
+      .get("https://cvtrsy.online/enviar-email", {
+        params: {
+          destinatario: destinatario,
+          assunto: assunto,
+          corpo: corpo,
+        },
+      })
+      .then((response1) => {
+        console.log(response1.data);
+        // Lógica adicional após o envio do primeiro email com sucesso
+
+        return axios.get("https://cvtrsy.online/enviar-email", {
+          params: {
+            destinatario: casal,
+            assunto: assunto,
+            corpo: corpo2,
+          },
+        });
+      })
+      .then((response2) => {
+        console.log(response2.data);
+        // Lógica adicional após o envio do segundo email com sucesso
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar o email:", error);
+        // Lógica de tratamento de erro
+      });
   };
+
+  // const enviarEmail = (dados: FormData) => {
+  //   const destinatario = email; // Substitua pelo endereço de email desejado
+  //   const assunto = "CONFIRMAÇÃO DE PRESENTE ESCOLHIDO";
+  //   const corpo = `Obrigado por escolher ${nomePresenteEscolhido}`;
+
+  //   axios
+  //     .get("https://cvtrsy.online/enviar-email", {
+  //       params: {
+  //         destinatario,
+  //         assunto,
+  //         corpo,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       // Lógica adicional após o envio do email com sucesso
+  //     })
+  //     .catch((error) => {
+  //       console.error("Erro ao enviar o email:", error);
+  //       // Lógica de tratamento de erro
+  //     });
+  // };
 
   const enviarDados = async (dados: FormData) => {
     try {
@@ -135,14 +230,6 @@ export default function PresenteEscolhido(props: Props) {
   return (
     <>
       <form className={estilos.formulario} onSubmit={handleSubmit}>
-        <div className={estilos.corpo__grid__item__acoes}>
-          <Link className={estilos.corpo__grid__item__acoes__link} to={"link"}>
-            Quero Comprar e entregar para os noivos
-          </Link>
-          <Link className={estilos.corpo__grid__item__acoes__pix} to={"pix"}>
-            Quero Fazer o Pix do valor para que os noivos comprem
-          </Link>
-        </div>
         <div className={estilos.conteiner}>
           <AiOutlineClose
             className={estilos.close}
