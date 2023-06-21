@@ -61,6 +61,12 @@ export default function Presenca() {
 
   const handleConfirmation = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    if (email.trim() === "") {
+      setFormSubmitted(true);
+      return;
+    }
+
     if (convidadoIdSelecionado && convidadoSelecionado) {
       const updatedConvidado = {
         nome: convidadoSelecionado.nome,
@@ -85,14 +91,14 @@ export default function Presenca() {
 
       const destinatario = email; // Substitua pelo endereço de email desejado
       const casal = "gabrieladourado10@hotmail.com";
-      const assunto = "CASAMENTO MARIA E ANTONIO - CONFIRMAÇÃO DE PRESENÇA";
+      const assunto = "CASAMENTO MÁIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
       const corpo = `
         Querido(a) ${nomeSelecionado},
     
         Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
     
         Com carinho,
-        Maria e Antonio
+        MÁIRA E ANTÔNIO
     
         ------------------------------
         
@@ -263,22 +269,25 @@ export default function Presenca() {
       {mostrarOpcoes && convidadoSelecionado && !isConfirmado && (
         <div className={estilos.formulario__opcoes}>
           <h2 className={estilos.formulario__textos}>
-            Olá {nomePessoaSelecionado}, precisamos saber quantas pessoas de sua
-            familia irão com você ao evento.
+            Olá {nomePessoaSelecionado}, precisamos de algumas informações para
+            confirmar sua presença.
           </h2>
-          <FormControl sx={{ width: "300px", margin: "10px" }}>
-            <TextField
-              label="Digite seu Email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              fullWidth
-              type="email"
-              error={formSubmitted && email.trim() === ""}
-              helperText={
-                formSubmitted && email.trim() === "" ? "Digite seu email" : ""
-              }
-              margin="normal"
-            />
+          <TextField
+            label="Digite seu Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            sx={{ width: "300px"}}
+            type="email"
+            error={formSubmitted && email.trim() === ""}
+            helperText={
+              formSubmitted && email.trim() === "" ? "Digite seu email" : ""
+            }
+            margin="normal"
+          />
+          <h2 className={estilos.formulario__textos}>
+            Quantas pessoas de sua familia irão com você ao evento?
+          </h2>
+          <FormControl sx={{ width: "300px"}}>
             <InputLabel id="outlined-select-currency">
               Além de você, quantas pessoas irão?
             </InputLabel>
@@ -286,7 +295,7 @@ export default function Presenca() {
               id="outlined-select-currency"
               labelId="outlined-select-currency"
               label="Além de você, quantas pessoas irão?"
-              sx={{ width: "300px", margin: "10px" }}
+              sx={{ width: "300px" }}
               value={qtdPessoasAdicionais}
               onChange={handleChangeQtdPessoasAdicionais}
             >

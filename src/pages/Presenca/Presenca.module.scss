@@ -8,9 +8,9 @@
 
 .formulario {
   font-family: "Michroma", sans-serif;
-  @apply flex flex-col h-[100vh] items-center border-2 w-full;
+  @apply flex flex-col h-[150vh] items-center border-2 w-full;
   &__titulo {
-    @apply text-center font-bold text-2xl text-azulMarinho mt-8 p-4;
+    @apply text-center font-bold text-2xl text-[#D15A7C] mt-8 p-4;
     @media screen and (min-width: $tablet) {
       @apply text-4xl;
     }

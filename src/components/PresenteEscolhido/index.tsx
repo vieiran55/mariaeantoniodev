@@ -91,14 +91,14 @@ export default function PresenteEscolhido(props: Props) {
 
     const destinatario = email; // Substitua pelo endereço de email desejado
     const casal = "gabrieladourado10@hotmail.com";
-    const assunto = "CASAMENTO MARIA E ANTONIO - CONFIRMAÇÃO DE PRESENTE";
+    const assunto = "CASAMENTO MÁIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENTE";
     const corpo = `
     Querido(a) ${nome},
 
     Muito obrigado por escolher nos presentear! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
 
     Com carinho,
-    Maria e Antonio
+    MÁIRA E ANTÔNIO
 
     ------------------------------
     

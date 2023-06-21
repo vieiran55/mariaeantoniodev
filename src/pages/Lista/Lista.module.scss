@@ -2,48 +2,83 @@
 @import "../../styles/variaveis";
 @import "../../styles/breakpoints";
 
-
-.modoDeVizualizacao{
+.modoDeVizualizacao {
   @apply flex flex-row h-10 items-center;
   @media screen and (min-width: 900px) {
     @apply w-1/2;
   }
-  &__iconGrid{
-    @apply  h-6 w-10 mx-1 border border-black;
+  &__iconGrid {
+    @apply h-6 w-10 mx-1 border border-black;
   }
-  &__iconList{
-    @apply  h-6 w-10 mx-1;
+  &__iconList {
+    @apply h-6 w-10 mx-1;
   }
 }
 
 .corpo {
   font-family: "Poppins", sans-serif;
-  background-image: url("../../images/Forma1.svg");
+  background-image: url("../../images/FormaGoldSmall.svg");
   background-repeat: no-repeat;
   background-position: top left;
   @apply h-max flex flex-col items-center;
-  @media screen and (min-width: $tablet) {
-    background-image: url("../../images/FormaMed1.svg"),;
-    background-position: top left;
+  @media screen and (min-width: 1050px) {
+    background-image: url("../../images/FormaGoldMed.svg"),
+      url("../../images/FormaGoldMedInvert.svg");
+    background-position: top left, top right;
+  }
+  @media screen and (min-width: 1400px) {
+    background-image: url("../../images/FormaGold.svg"),
+      url("../../images/FormaGoldInvert.svg");
+  }
+  &__cabecalho {
+    @apply flex w-full flex-row justify-between;
   }
   &__casal {
     background-image: url("../../images/ramos.png"),
       url("../../images/aliancas.png");
     background-repeat: no-repeat;
     background-position: bottom, top;
-    background-size: 70%, 15%;
+    background-size: 60%, 12%;
     font-family: "Gwendolyn", cursive;
-    @apply self-start py-8 px-6 text-4xl text-black mt-1 cursor-pointer;
-    @media screen and (min-width: $tablet) {
-      background-size: 54%, 12%;
-      @apply text-6xl mt-5;
+    @apply self-start;
+    @media screen and (min-width: 1050px) {
+      @apply self-center mt-4;
+    }
+    &__titulo {
+      @apply pt-4 pb-6 px-6 text-4xl text-center text-black mt-1 cursor-pointer;
+      @media screen and (min-width: 1050px) {
+        @apply text-6xl mt-5 pb-8;
+      }
+    }
+  }
+  &__lateraisEsq {
+    background-image: url("../../images/flores.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    rotate: 350deg;
+    transform: rotateY(180deg);
+    width: 365px;
+    @media screen and (max-width: 1050px) {
+      @apply hidden;
+    }
+  }
+  &__lateraisDir {
+    background-image: url("../../images/flores.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    rotate: 375deg;
+    width: 365px;
+    @media screen and (max-width: 1050px) {
+      @apply hidden;
     }
   }
   &__titulo {
     font-family: "Michroma", sans-serif;
     @apply text-center font-bold text-2xl text-[#D15A7C] mt-16 p-4;
     @media screen and (min-width: $tablet) {
-    @apply text-4xl;
+      @apply text-4xl;
     }
   }
   &__grade {
