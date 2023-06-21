@@ -1,0 +1,18 @@
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.rodape{
+  @apply w-full p-4 bottom-0 relative bg-neutral-200 text-center dark:bg-black lg:text-left h-24 flex flex-row items-center justify-center;
+  &__coteiner{
+    font-family: 'Roboto', sans-serif;
+    @apply p-1 text-center text-neutral-700 dark:text-neutral-200;
+    &__texto{
+      @apply text-neutral-800 dark:text-neutral-400;
+    }
+  }
+}
+.logo{
+  @apply w-16 h-16;
+}
