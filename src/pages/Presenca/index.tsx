@@ -84,7 +84,7 @@ export default function Presenca() {
         });
 
       const destinatario = email; // Substitua pelo endereço de email desejado
-      const casal = "sargento355@gmail.com";
+      const casal = "gabrieladourado10@hotmail.com";
       const assunto = "CASAMENTO MARIA E ANTONIO - CONFIRMAÇÃO DE PRESENÇA";
       const corpo = `
         Querido(a) ${nomeSelecionado},
