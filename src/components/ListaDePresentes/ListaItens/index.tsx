@@ -104,6 +104,11 @@ export default function ListaItens(props: Props) {
     [estilos.corpo__grid__item__icon]: gridCss,
     [estilosModoLista.corpo__lista__item__icon]: listaCss,
   });
+  const classCorpoConteinerSelecao = classNames({
+    [estilos.corpo__grid__conteinerSelecao]: gridCss,
+    [estilosModoLista.corpo__lista__conteinerSelecao]: listaCss,
+  });
+
 
   const handClick = () => {
     setNomePresenteEscolhido(title);
@@ -154,13 +159,13 @@ export default function ListaItens(props: Props) {
             </Link>
           )} */}
           {isShown && (
-            <div className="flex flex-row items-center justify-evenly w-full">
+            <div className={classCorpoConteinerSelecao}>
               <h2 className={classCorpoItemPreco}>{`R$ ${price}`}</h2>
               <Button
                 variant="contained"
                 onClick={handClick}
                 className={classCorpoItemAcoesConfirmar}
-                sx={{marginTop: "10px", width: "120px"}}
+                sx={{marginTop: "10px", width: "95px"}}
               >
                 Selecionar presente
               </Button>
