@@ -91,14 +91,14 @@ export default function Presenca() {
 
       const destinatario = email; // Substitua pelo endereço de email desejado
       const casal = "gabrieladourado10@hotmail.com";
-      const assunto = "CASAMENTO MÁIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
+      const assunto = "CASAMENTO MAIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
       const corpo = `
         Querido(a) ${nomeSelecionado},
     
         Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
     
         Com carinho,
-        MÁIRA E ANTÔNIO
+        MAIRA E ANTÔNIO
     
         ------------------------------
         
@@ -224,7 +224,7 @@ export default function Presenca() {
         <div className={estilos.formulario__cabecalho}>
           <div className={estilos.formulario__lateraisEsq}></div>
           <div className={estilos.formulario__casal} onClick={() => navigate("/")}>
-            <h1 className={estilos.formulario__casal__titulo}>Máira e Antônio</h1>
+            <h1 className={estilos.formulario__casal__titulo}>Maira e Antônio</h1>
           </div>
           <div className={estilos.formulario__lateraisDir}></div>
         </div>

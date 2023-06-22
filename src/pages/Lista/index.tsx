@@ -77,7 +77,7 @@ export default function Lista(props: Props) {
         </div>
         <div className={estilos.corpo__casal} onClick={() => navigate("/")}> 
           <h1 className={estilos.corpo__casal__titulo}>
-            Máira e Antônio
+            Maira e Antônio
           </h1>
         </div>
         <div className={estilos.corpo__lateraisDir}>
