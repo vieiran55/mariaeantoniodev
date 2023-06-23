@@ -7,13 +7,14 @@
   transition: box-shadow 0.7s ease;
   position: relative;
   display: flex;
-  place-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   place-items: center;
   overflow: hidden;
   box-shadow: 0 0 0 1px black; /* Adicione a borda aqui */
-  @apply w-64 h-[24rem] flex;
+  @apply w-64 h-[21rem] flex;
   @media screen and (min-width: 900px) {
-    @apply w-80 h-[28rem] flex;
+    @apply w-80 h-[24rem] flex;
   }
 }
 
@@ -57,6 +58,7 @@
 .corpo__grid__item {
   @apply text-center flex flex-col py-1 items-center w-full;
   &__icon{
+    margin-bottom: -50px;
     @apply h-5 w-5 self-end fill-red-600;
   }
   &__imagem {

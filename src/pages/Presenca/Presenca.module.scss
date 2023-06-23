@@ -79,6 +79,10 @@
   }
 }
 
+.icon{
+  @apply w-5 h-5 text-gray-500 dark:text-gray-400 fill-current;
+}
+
 .presenca {
   @apply my-6 text-xl text-center font-bold text-green-600;
 }

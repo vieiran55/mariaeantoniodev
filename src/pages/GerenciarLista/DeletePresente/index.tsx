@@ -31,7 +31,7 @@ export default function DeletePresente(props: Props) {
   const deletarDados = async (id: number) => {
     try {
       const response = await axios.delete(
-        `https://cvtrsy.online/listadepresentes/${id}`
+        `https://cvtrsy.online/listadepresentesma/${id}`
       );
       console.log(response.data);
       Swal({

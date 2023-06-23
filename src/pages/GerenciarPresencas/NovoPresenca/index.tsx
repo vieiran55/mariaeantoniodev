@@ -26,12 +26,12 @@ export default function NovoPresenca(props: Props) {
   const enviarDados = async (dados: Opcoes) => {
     try {
       const response = await axios.post(
-        "https://cvtrsy.online/convidados",
+        "https://cvtrsy.online/convidadosma",
         dados
       );
       console.log(response.data);
       verificarSucesso();
-      setTimeout(refresh, 2000);
+      // setTimeout(refresh, 2000);
     } catch (error) {
       console.error(error);
     }

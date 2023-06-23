@@ -3,11 +3,11 @@ import wave from "../../images/waveWhite.svg";
 import estilos from "./Home1.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
-import fotoCasal from "../../images/casalPorDoSol.png";
-import fotoCasal1 from "../../images/casa1.png";
-import fotoCasal2 from "../../images/casal2.png";
-import fotoCasal3 from "../../images/casal3.png";
-import fotoCasal4 from "../../images/casal4.png";
+import fotoCasal1 from "../../images/mairaeantonio1.jpeg";
+import fotoCasal2 from "../../images/mairaeantonio2.jpeg";
+import fotoCasal3 from "../../images/mairaeantonio3.jpeg";
+import fotoCasal4 from "../../images/mairaeantonio4.jpeg";
+import fotoCasal5 from "../../images/mairaeantonio5.jpeg";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
@@ -66,8 +66,8 @@ export default function Home() {
             </div>
             <div className={estilos.entrada__foto}>
               <img
-                src={fotoCasal}
-                alt={fotoCasal}
+                src={fotoCasal4}
+                alt={fotoCasal4}
                 className={estilos.entrada__foto__imagem}
               />
               <div className={estilos.entrada__cartaoInferior}>
@@ -141,11 +141,6 @@ export default function Home() {
           </h1>
           <div className={estilos.galeria__fotos}>
             <img
-              src={fotoCasal1}
-              alt={fotoCasal1}
-              className={estilos.galeria__fotos__images}
-            />
-            <img
               src={fotoCasal2}
               alt={fotoCasal2}
               className={estilos.galeria__fotos__images}
@@ -156,8 +151,13 @@ export default function Home() {
               className={estilos.galeria__fotos__images}
             />
             <img
-              src={fotoCasal4}
-              alt={fotoCasal4}
+              src={fotoCasal1}
+              alt={fotoCasal1}
+              className={estilos.galeria__fotos__images}
+            />
+            <img
+              src={fotoCasal5}
+              alt={fotoCasal5}
               className={estilos.galeria__fotos__images}
             />
           </div>

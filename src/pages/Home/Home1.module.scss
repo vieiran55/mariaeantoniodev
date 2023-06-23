@@ -13,7 +13,7 @@
     @apply absolute flex flex-row w-36;
     @apply flex flex-row items-center justify-between mt-4 ;
     @media screen and (min-width: $tablet) {
-      @apply w-80 justify-evenly;
+      @apply w-80 justify-evenly hidden;
     }
     @media screen and (min-width: $desktop_md) {
       @apply hidden;
@@ -165,6 +165,12 @@
   }
   @media screen and (min-width: 1080px) {
     @apply h-[28rem] items-center;
+  }
+  &__titulo{
+    @apply hidden;
+  }
+  &__conteinerTextos{
+    @apply hidden;
   }
 }
 

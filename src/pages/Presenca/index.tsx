@@ -12,6 +12,7 @@ import {
 import { Select } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { debounce } from "lodash";
 
 interface FormValues {
   nome: string;
@@ -50,9 +51,10 @@ export default function Presenca() {
 
   useEffect(() => {
     axios
-      .get<Convidado[]>("https://cvtrsy.online/convidados")
+      .get<Convidado[]>("https://cvtrsy.online/convidadosma")
       .then((resposta) => {
         setConvidados(resposta.data);
+        console.log(resposta.data);
       })
       .catch((erro) => {
         console.log(erro);
@@ -78,7 +80,7 @@ export default function Presenca() {
 
       axios
         .put(
-          `https://cvtrsy.online/convidados/${convidadoIdSelecionado}`,
+          `https://cvtrsy.online/convidadosma/${convidadoIdSelecionado}`,
           updatedConvidado
         )
         .then((response) => {
@@ -89,73 +91,71 @@ export default function Presenca() {
           console.error("Erro ao confirmar presença:", error);
         });
 
-      const destinatario = email; // Substitua pelo endereço de email desejado
-      const casal = "gabrieladourado10@hotmail.com";
-      const assunto = "CASAMENTO MAIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
-      const corpo = `
-        Querido(a) ${nomeSelecionado},
-    
-        Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
-    
-        Com carinho,
-        MAIRA E ANTÔNIO
-    
-        ------------------------------
-        
-        Dados do Cadastro:
-    
-        - Nome: ${nomeSelecionado}
-        - E-mail: ${email}
-        - Pessoas que irão com você: ${nomesPessoasAdicionais}
+      //   const destinatario = email; // Substitua pelo endereço de email desejado
+      //   const casal = "gabrieladourado10@hotmail.com";
+      //   const assunto = "CASAMENTO MAIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
+      //   const corpo = `
+      //     Querido(a) ${nomeSelecionado},
 
-    
-        ------------------------------
-    
-      `;
+      //     Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
 
-      const corpo2 = `
-      PresenÇA Reservada
-      ------------------------------
-      
-      Dados do Cadastro:
-    
-    
-      - Nome: ${nomeSelecionado}
-      - E-mail: ${email}
-      - Pessoas que irão com você: ${nomesPessoasAdicionais}
-  
-      ------------------------------
-    
-    `;
+      //     Com carinho,
+      //     MAIRA E ANTÔNIO
 
-      axios
-        .get("https://cvtrsy.online/enviar-email", {
-          params: {
-            destinatario: destinatario,
-            assunto: assunto,
-            corpo: corpo,
-          },
-        })
-        .then((response1) => {
-          console.log(response1.data);
-          // Lógica adicional após o envio do primeiro email com sucesso
+      //     ------------------------------
 
-          return axios.get("https://cvtrsy.online/enviar-email", {
-            params: {
-              destinatario: casal,
-              assunto: assunto,
-              corpo: corpo2,
-            },
-          });
-        })
-        .then((response2) => {
-          console.log(response2.data);
-          // Lógica adicional após o envio do segundo email com sucesso
-        })
-        .catch((error) => {
-          console.error("Erro ao enviar o email:", error);
-          // Lógica de tratamento de erro
-        });
+      //     Dados do Cadastro:
+
+      //     - Nome: ${nomeSelecionado}
+      //     - E-mail: ${email}
+      //     - Pessoas que irão com você: ${nomesPessoasAdicionais}
+
+      //     ------------------------------
+
+      //   `;
+
+      //   const corpo2 = `
+      //   PresenÇA Reservada
+      //   ------------------------------
+
+      //   Dados do Cadastro:
+
+      //   - Nome: ${nomeSelecionado}
+      //   - E-mail: ${email}
+      //   - Pessoas que irão com você: ${nomesPessoasAdicionais}
+
+      //   ------------------------------
+
+      // `;
+
+      //   axios
+      //     .get("https://cvtrsy.online/enviar-email", {
+      //       params: {
+      //         destinatario: destinatario,
+      //         assunto: assunto,
+      //         corpo: corpo,
+      //       },
+      //     })
+      //     .then((response1) => {
+      //       console.log(response1.data);
+      //       // Lógica adicional após o envio do primeiro email com sucesso
+
+      //       return axios.get("https://cvtrsy.online/enviar-email", {
+      //         params: {
+      //           destinatario: casal,
+      //           assunto: assunto,
+      //           corpo: corpo2,
+      //         },
+      //       });
+      //     })
+      //     .then((response2) => {
+      //       console.log(response2.data);
+      //       // Lógica adicional após o envio do segundo email com sucesso
+      //     })
+      //     .catch((error) => {
+      //       console.error("Erro ao enviar o email:", error);
+      //       // Lógica de tratamento de erro
+      //     });
     }
   };
 
@@ -223,8 +223,13 @@ export default function Presenca() {
       <form onSubmit={handleConfirmation} className={estilos.formulario}>
         <div className={estilos.formulario__cabecalho}>
           <div className={estilos.formulario__lateraisEsq}></div>
-          <div className={estilos.formulario__casal} onClick={() => navigate("/")}>
-            <h1 className={estilos.formulario__casal__titulo}>Maira e Antônio</h1>
+          <div
+            className={estilos.formulario__casal}
+            onClick={() => navigate("/")}
+          >
+            <h1 className={estilos.formulario__casal__titulo}>
+              Maira e Antônio
+            </h1>
           </div>
           <div className={estilos.formulario__lateraisDir}></div>
         </div>
@@ -239,6 +244,11 @@ export default function Presenca() {
             id="demo-simple-select-autowidth-label"
             value={nomeSelecionado}
             onChange={handleNameSelect}
+            MenuProps={{
+              style: {
+                height: "50vh", // Defina a altura máxima desejada
+              },
+            }}
           >
             <MenuItem value="">Selecione...</MenuItem>
 

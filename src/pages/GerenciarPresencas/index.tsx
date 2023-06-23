@@ -35,7 +35,7 @@ export default function GerecniarPresencas() {
 
   useEffect(() => {
     axios
-      .get<IPresencas[]>("https://cvtrsy.online/convidados")
+      .get<IPresencas[]>("https://cvtrsy.online/convidadosma")
       .then((resposta) => {
         setConvidados(resposta.data);
       })

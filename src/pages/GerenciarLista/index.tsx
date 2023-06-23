@@ -48,7 +48,7 @@ export default function GerenciarLista(props: Props) {
 
   useEffect(() => {
     axios
-      .get<IOpcoes[]>("https://cvtrsy.online/listadepresentes")
+      .get<IOpcoes[]>("https://cvtrsy.online/listadepresentesma")
       .then((resposta) => {
         setListaPresentes(resposta.data);
         console.log(listaPresentes);
