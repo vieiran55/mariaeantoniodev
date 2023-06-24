@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn&family=Poppins&display=swap");
+
+
+.formularioAtualiza__ativo{
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+  @apply  flex flex-col justify-between items-center absolute z-10 w-full h-[70vw] animate-fadeinDown pt-10;
+}
+.formularioAtualiza__desativado{
+  @apply hidden;
+}
+
+.formularioClose{
+  @apply self-end h-6 w-6 cursor-pointer;
+}
+
+.formularioConteiner{
+  @apply h-[600px] w-[600px] p-4 dark:bg-[#36d6ad]  flex flex-col justify-around;
+}
+
+.formularioTitulo{
+  @apply text-xl text-center font-bold;
+}
+
+.formularioTitulos{
+  @apply text-lg px-2;
+}
+
+.formularioInputs{
+  @apply w-full  text-sm text-red-600;
+}
+
+.botao{
+  @apply flex self-end;
+}

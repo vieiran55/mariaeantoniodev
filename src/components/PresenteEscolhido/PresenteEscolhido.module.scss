@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn&family=Poppins&display=swap");
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+.formulario{
+  @apply h-[100vh] mt-4 flex flex-col;
+}
+
+.titulo {
+  font-family: "Michroma", sans-serif;
+  @apply text-center font-bold text-xl text-azulMarinho p-4;
+  @media screen and (min-width: $tablet) {
+  @apply text-2xl;
+  }
+}
+
+.close{
+  @apply fill-red-600 self-end cursor-pointer;
+}
+
+.conteiner{
+  @apply flex flex-col w-[330px] border-2 rounded-md p-4 bg-white;
+  @media screen and (min-width: $tablet) {
+    @apply flex w-[440px] flex-col;
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   .formulario {
+//     @apply bg-black;
+//   }
+//   .titulo {
+//     @apply text-white;
+//   }
+//   .close {
+//     @apply fill-red-600;
+//   }
+//   .conteiner {
+//     @apply bg-gray-900 text-white;
+//   }
+// }
+
+
+.corpo__grid__item__acoes{
+  @apply flex flex-col mt-2 w-full items-center;
+  &__link {
+    text-transform: uppercase;
+    padding: 0.0em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 4px;
+    @apply bg-[#EE8972] px-3 text-xs flex items-center text-ellipsis w-11/12;
+  }
+  &__pix {
+    text-transform: uppercase;
+    padding: 0.0em 1em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 4px;
+    @apply bg-[#EE8972] text-xs flex items-center text-center  w-11/12 mt-2;
+  }
+}

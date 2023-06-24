@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn&family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@700&display=swap');
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+.central{
+  background-image: url("../../images/bgRosasLarge.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @apply bg-gold;
+  &__cartaoBotoes{
+    @apply absolute flex flex-row w-36;
+    @apply flex flex-row items-center justify-between mt-4 ;
+    @media screen and (min-width: $tablet) {
+      @apply w-80 justify-evenly hidden;
+    }
+    @media screen and (min-width: $desktop_md) {
+      @apply hidden;
+    }
+    &__confirma {
+      @apply h-14 w-40 mx-1;
+      @media screen and (min-width: $tablet) {
+        @apply w-28;
+      }
+    }
+  
+    &__Lista {
+      @apply h-14 w-40 mx-1;
+      @media screen and (min-width: $tablet) {
+        @apply w-28;
+      }
+    } 
+  }
+}
+
+.central__cartaoBotoesDesktop{
+  @apply w-full flex flex-row justify-around mt-6;
+  @media screen and (max-width: $tablet) {
+    @apply hidden;
+  }
+}
+.navbarhome{
+  position: relative;
+  @apply z-10;
+}
+
+.entrada {
+  background-image: url("../../images/flor1.png"),
+    url("../../images/flor2Gr.png");
+  background-repeat: no-repeat;
+  background-position: 109% 103%, -11% 103%;
+  background-size: 30%, 32%;
+  @apply flex flex-col items-center justify-center h-[100vh] w-full p-1 pb-40;
+  @media screen and (min-width: $tablet) {
+    background-size: 240px, 235px, 280px;
+  }
+  @media screen and (min-width: $desktop_md) {
+    background-image: url("../../images/flor1Larg.png"),
+    url("../../images/flor2GrLarg.png"), url("../../images/flor3Larg.png");
+    background-position: right bottom, left bottom, top right;
+    @apply flex-row
+  }
+  &__casalConteiner{
+    @apply flex flex-col justify-around hidden; 
+  }
+  &__casal {
+    background-image: url("../../images/ramos.png"),
+      url("../../images/aliancas.png");
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-size: 60%, 12%;
+    font-family: "Gwendolyn", cursive;
+    @apply h-24 flex flex-col items-center justify-center text-center;
+    @media screen and (min-width: $tablet) {
+      @apply h-40;
+    }
+    &__titulo {
+      @apply px-6 text-[3rem] text-center text-black;
+      @media screen and (min-width: $tablet) {
+        @apply text-7xl;
+      }
+    }
+  }
+  &__foto {
+    z-index: 0;
+    position: relative;
+    @apply my-4 relative;
+    &__imagem {
+      @apply w-80 h-96 rounded-tr-[7.5rem] rounded-bl-3xl z-10 drop-shadow-lg;
+      @media screen and (min-width: $tablet) {
+        @apply w-[27rem] h-[35rem] z-10;
+      }
+      @media screen and (min-width: $desktop_xl) {
+        @apply w-[39rem] h-[45rem] z-10;
+      }
+    }
+  }
+  &__flor4{
+    background-image: url("../../images/flor4.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: -31px;
+    left: -15px;
+    z-index: 2;
+  }
+  &__cartaoInferior{
+    bottom: -15px;
+    left: 28%;
+    background-color: #DAA520; 
+    @apply absolute rounded-lg w-36;
+    &__text {
+      font-family: "Gwendolyn", cursive;
+      @apply self-start text-3xl text-black text-center flex flex-col justify-center items-center;
+    }
+  }
+}
+
+.sobre{
+  @apply text-center bg-gold animate-fadeinDown;
+  font-family: 'Poppins', cursive;
+  @media screen and (min-width: $tablet) {
+    @apply flex flex-col items-center;
+  }
+  @media screen and (min-width: 1080px) {
+    @apply h-[28rem] items-center;
+  }
+  &__titulo{
+    font-family: 'Permanent Marker', cursive;
+    @apply text-lg mb-2;
+    @media screen and (min-width: $tablet) {
+      @apply text-2xl;
+    }
+    @media screen and (min-width: 1080px) {
+      @apply text-6xl;
+    }
+  }
+  &__conteinerTextos{
+    @media screen and (min-width: $tablet) {
+      @apply flex;
+    }
+    @media screen and (min-width: 1080px) {
+      @apply w-[1000px] h-80;
+    }
+  }
+  &__conteinerTextosEsquerd{
+    @media screen and (min-width: $tablet) {
+      @apply w-1/2  px-5;
+    }
+  }
+  &__conteinerTextosDireita{
+    @media screen and (min-width: $tablet) {
+      @apply w-1/2  px-5;
+    } 
+  }
+  &__texto{
+    @apply text-justify my-4 px-2;
+  }
+  &__destaque{
+    @apply font-bold;
+  }
+}
+
+.sobre2{
+  @apply text-center bg-gold ;
+  font-family: 'Poppins', cursive;
+  @media screen and (min-width: $tablet) {
+    @apply flex flex flex-col items-center;
+  }
+  @media screen and (min-width: 1080px) {
+    @apply h-[28rem] items-center;
+  }
+  &__titulo{
+    font-family: 'Permanent Marker', cursive;
+    @apply text-lg mb-2;
+    @media screen and (min-width: $tablet) {
+      @apply text-2xl;
+    }
+    @media screen and (min-width: 1080px) {
+      @apply text-6xl;
+    }
+  }
+  &__conteinerTextos{
+    @media screen and (min-width: $tablet) {
+      @apply flex;
+    }
+    @media screen and (min-width: 1080px) {
+      @apply w-[1000px] h-80;
+    }
+  }
+  &__conteinerTextosEsquerd{
+    @media screen and (min-width: $tablet) {
+      @apply w-1/2  px-5;
+    }
+  }
+  &__conteinerTextosDireita{
+    @media screen and (min-width: $tablet) {
+      @apply w-1/2  px-5;
+    } 
+  }
+  &__texto{
+    @apply text-justify my-4 px-2;
+  }
+  &__destaque{
+    @apply font-bold;
+  }
+}
+
+
+.galeria{
+  background-image: url("../../images/bgNamesSmall.png");
+  background-repeat: repeat;
+  background-size: 50%;
+  @apply h-[100vh] flex flex-col items-center justify-center animate-fadeinDown bg-gold ;
+  @media screen and (min-width: 830px) {
+    @apply h-[130vh] flex;
+  }
+  @media screen and (min-width: 1080px) {
+    background-repeat: repeat;
+    background-size: 10%;
+    @apply h-[170vh] flex;
+  }
+  @media screen and (min-width: 1600px) {
+    @apply h-[260vh] flex;
+  }
+  &__titulo{
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Permanent Marker', cursive;
+    @apply text-center text-gold text-2xl my-6;
+    @media screen and (min-width: 600px) {
+      @apply text-4xl;
+    }
+    @media screen and (min-width: 1080px) {
+      @apply text-6xl;
+    }
+  }
+  &__fotos{
+    @apply flex flex-row justify-around h-[80%] flex-wrap;
+    &__images{
+      filter: grayscale(100%);
+      @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg;
+      @media screen and (min-width: 460px) {
+        @apply h-[20rem] w-[13rem] text-gold;
+      }
+      @media screen and (min-width: 600px) {
+        @apply h-[20rem] w-[18rem] text-gold;
+      }
+      @media screen and (min-width: 830px) {
+        @apply h-[24rem] w-[22rem] text-gold m-3;
+      }
+      @media screen and (min-width: 1080px) {
+        @apply h-[38rem] w-[32rem] text-gold m-3;
+      }
+      @media screen and (min-width: 1600px) {
+        @apply h-[57rem] w-[48rem] text-gold m-3;
+      }
+    }
+  }
+}
+
+.galeria2{
+  background-image: url("../../images/bgNamesSmall.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply h-[100vh] flex flex-col items-center justify-center;
+  &__titulo{
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Permanent Marker', cursive;
+    @apply text-center text-gold text-2xl my-6 hidden;
+  }
+  &__fotos{
+    @apply flex flex-row justify-around h-[80%] flex-wrap hidden;
+    &__images{
+      filter: grayscale(100%);
+      @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg hidden;
+      @media screen and (min-width: 460px) {
+        @apply h-[20rem] w-[13rem] text-gold hidden;
+      }
+      @media screen and (min-width: 600px) {
+        @apply h-[20rem] w-[18rem] text-gold hidden;
+      }
+    }
+  }
+}

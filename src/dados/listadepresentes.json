@@ -1,0 +1,243 @@
+[
+  {
+    "id": 1,
+    "title": "Batedeira",
+    "link": "https://www.zoom.com.br/batedeira/batedeira-planetaria-philco-php500-turbo?_lc=11",
+    "photo": "/assets/imagesLista/batedeiraplanetaria.png",
+    "status": "disponivel",
+    "price": 259.09
+  },
+  {
+    "id": 2,
+    "title": "Liquidificador",
+    "link": "https://www.zoom.com.br/liquidificador/liquidificador-philco-turbo-plq1350-3-litros-12-velocidades-1-200-w?_lc=88&searchterm=liquidificador%20220volts",
+    "photo": "/assets/imagesLista/liquidificadorphilco.png",
+    "status": "indisponivel",
+    "price": 179.99
+  },
+  {
+    "id": 3,
+    "title": "Forno Elétrico",
+    "link": "https://www.magazineluiza.com.br/forno-eletrico-de-bancada-mueller-44-litros-sonetto-grill/p/ae3k2ga326/ed/frne/",
+    "photo": "/assets/imagesLista/FornoEletrico.png",
+    "status": "disponivel",
+    "price": 557.99
+  },
+  {
+    "id": 4,
+    "title": "Fritadeira Elétrica sem Óleo/Air Fryer Mondial - AFN-40-BF Preta com Timer",
+    "link": "https://www.magazineluiza.com.br/fritadeira-eletrica-sem-oleo-air-fryer-mondial-afn-40-bf-preta-com-timer/p/236409800/ep/frel/?seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=68974&gclid=CjwKCAjwov6hBhBsEiwAvrvN6Ia9DJEEZrBNlEyCXxltCuhOcvR90LvEcnwRx__77E-6RnHgx6ZPihoCApcQAvD_BwE&gclsrc=aw.ds",
+    "photo": "/assets/imagesLista/FritadeiraEletrica.png",
+    "status": "disponivel",
+    "price": 371.99
+  },
+
+  {
+    "id": 6,
+    "title": "Kit 5 Facas Aço Inox Hauskraft Essential Conjunto Jogo Cepo",
+    "link": "https://www.magazineluiza.com.br/kit-5-facas-aco-inox-hauskraft-essential-conjunto-jogo-cepo/p/dge2b58f9e/ud/ucep/?partner_id=64852&utm_source=pdp_mobile&utm_medium=share",
+    "photo": "/assets/imagesLista/faca.png",
+    "status": "disponivel",
+    "price": 137.99
+  },
+  {
+    "id": 7,
+    "title": "Jogo de Talher 24 Peças",
+    "link": "https://www.zoom.com.br/faqueiro/jogo-de-talher-faqueiro-24-pecas-inox-buzios-tramontina?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/joogodetalher.png",
+    "status": "disponivel",
+    "price": 84.32
+  },
+  {
+    "id": 8,
+    "title": "Conjunto Kit De Utensílios De Cozinha 10 Peças",
+    "link": "https://www.zoom.com.br/utensilios-cozinha/conjunto-kit-de-utensilios-de-cozinha-10-pecas-silicone-inox?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/kitutensilios.png",
+    "status": "disponivel",
+    "price": 104.99
+  },
+  {
+    "id": 10,
+    "title": "Conjunto de Panelas Tramontina Alumínio 5 peça(s) Turim 20298/761 Antiaderente",
+    "link": "https://www.zoom.com.br/panelas/conjunto-de-panelas-aluminio-5-peca-s-tramontina-turim-20298-761?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/conjuntodepanelastramontina5pecas.png",
+    "status": "disponivel",
+    "price": 243.48
+  },
+  {
+    "id": 11,
+    "title": "Jogo de Panelas Tramontina Turim Antiaderente Grafite - 10 Peças",
+    "link": "https://www.americanas.com.br/produto/27711243",
+    "photo": "/assets/imagesLista/jogoPanelasTramontina.png",
+    "status": "disponivel",
+    "price": 371.99
+  },
+  {
+    "id": 12,
+    "title": "Panela de Pressão",
+    "link": "https://www.zoom.com.br/panela-pressao/panela-de-pressao-panelux-4-5-l-44624?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/panelapressao.png",
+    "status": "disponivel",
+    "price": 141.24
+  },
+  {
+    "id": 13,
+    "title": "Assadeira Travessa Retangular Vidro Com Tampa 1,6L Marinex",
+    "link": "https://www.magazineluiza.com.br/assadeira-travessa-retangular-vidro-com-tampa-16l-marinex/p/fcb667ch66/ud/fabo/",
+    "photo": "/assets/imagesLista/assadeiratravessa.png",
+    "status": "disponivel",
+    "price": 58.41
+  },
+  {
+    "id": 14,
+    "title": "Forma Filetada 1,3L Travessa Vidro Temperado Marinex - 3 Un",
+    "link": "https://www.magazineluiza.com.br/forma-filetada-13l-travessa-vidro-temperado-marinex-3-un-nadir-figueiredo/p/kh14jb1ggh/ud/trav/",
+    "photo": "/assets/imagesLista/formafiletada.png",
+    "status": "disponivel",
+    "price": 89.91
+  },
+  {
+    "id": 15,
+    "title": "Kit 3 Formas Para Bolo Torta antiaderente C/ Fundo Removível",
+    "link": "https://www.magazineluiza.com.br/kit-3-formas-para-bolo-torta-antiaderente-c-fundo-removivel-em-casa-tem/p/hf5fh836ga/ud/cjfa/?&seller_id=frlimashop&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=70403&gclid=CjwKCAjw3POhBhBQEiwAqTCuBtUhTIEjRZM7A1gJXxkk5jneKkcwxWtfi1YDh97ideRDFUHedzijNxoCqJYQAvD_BwE&gclsrc=aw.ds",
+    "photo": "/assets/imagesLista/kit3formasparabolo.png",
+    "status": "disponivel",
+    "price": 99.92
+  },
+  {
+    "id": 16,
+    "title": "Conjunto de Assadeiras Tramontina Brasil",
+    "link": "https://m.casasbahia.com.br/conjunto-de-assadeiras-tramontina-brasil-5-pecas-13624782/p/13624782?utm_medium=Cpc&utm_source=GP_PLA&IdSku=13624782&idLojista=10037&tipoLojista=1P&&utm_campaign=gg_pmax_inter_utld_apostas&gclid=CjwKCAjw3POhBhBQEiwAqTCuBvVCUIqDC9GY11yPzio6nbTdNGNCJxkt7tozZFu8kqmEUF7JzUfN0xoCsqgQAvD_BwE&gclsrc=aw.ds",
+    "photo": "/assets/imagesLista/conjuntoassadeiras.png",
+    "status": "disponivel",
+    "price": 164.99
+  },
+  {
+    "id": 17,
+    "title": "Kit com 2 Potes de Vidro para Mantimentos com Tampa de Bambu 2L - Oikos",
+    "link": "https://www.magazinevoce.com.br/magazinepromosdarafa/kit-com-2-potes-de-vidro-para-mantimentos-com-tampa-de-bambu-2l-oikos/p/aj1185jj67/ud/porm/",
+    "photo": "/assets/imagesLista/kitpotesdevidro.png",
+    "status": "disponivel",
+    "price": 97.09
+  },
+  {
+    "id": 18,
+    "title": "4 Potes de Vidro",
+    "link": "https://www.zoom.com.br/potes-mantimentos/4-potes-de-vidro-hermeticos-com-tampa-de-bambu-electrolux?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/4potesdevidro.png",
+    "status": "disponivel",
+    "price": 171.96
+  },
+  {
+    "id": 19,
+    "title": "Kit Jarra e Taças Transparentes Wincy",
+    "link": "https://www.amazon.com.br/Jarra-Taças-Transparentes-Wincy-VDA11033/dp/B08VLX7V6J/ref=pd_aw_di_ci_mcx_2l_mi_ca_mcx_picks_views_4?pd_rd_w=4dNvc&content-id=amzn1.sym.8b1b993e-2201-4f3b-97a5-4e19c0d03594&pf_rd_p=8b1b993e-2201-4f3b-97a5-4e19c0d03594&pf_rd_r=FSP4A7HYPQV8VMXCZA51&pd_rd_wg=DgN0W&pd_rd_r=55974b61-4d00-40d9-b5c6-06cc3cfd542e&pd_rd_i=B08VLX7V6J",
+    "photo": "/assets/imagesLista/jogodetacasJarra.png",
+    "status": "disponivel",
+    "price": 102.99
+  },
+  {
+    "id": 20,
+    "title": "Jogo de Copos de Vidro 350ml 6 Peças Haus - Pavillion",
+    "link": "https://www.magazineluiza.com.br/jogo-de-copos-de-vidro-350ml-6-pecas-haus-pavillion/p/231205400/ud/coco/?seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=69736&gclid=CjwKCAjwov6hBhBsEiwAvrvN6JanGLgHZf31Ip-U65LN4EAhfD3CeDpL1nUw2PABsseWkYFV7JuaShoC7hgQAvD_BwE&gclsrc=aw.ds",
+    "photo": "/assets/imagesLista/jogodecopos.png",
+    "status": "disponivel",
+    "price": 67.99
+  },
+  {
+    "id": 21,
+    "title": "Aparelho de Jantar Grecia",
+    "link": "https://www.americanas.com.br/produto/7356311070/aparelho-de-jantar-e-cha-20-pecas-oxford-biona-em-ceramica-grecia-azul",
+    "photo": "/assets/imagesLista/aparelhodejantarGrecia.png",
+    "status": "disponivel",
+    "price": 198.93
+  },
+  {
+    "id": 22,
+    "title": "Aparelho de Jantar e Chá 20 peças",
+    "link": "https://www.amazon.com.br/dp/B07GJTCTZN/ref=asc_df_B07GJTCTZN1681628400000?ie=UTF8&condition=new&creative=380345&creativeASIN=B07GJTCTZN&linkCode=asm&tag=zoom059-20&ascsubtag=d079dbdea9e1485299cca490ab809e9f",
+    "photo": "/assets/imagesLista/aparelhodejantarEnergyTB.png",
+    "status": "disponivel",
+    "price": 259.99
+  },
+  {
+    "id": 23,
+    "title": "Escorredor Dobrável c/Madeira Teca, Stolf",
+    "link": "https://www.amazon.com.br/dp/B0842WCDL5?ref_=cm_sw_r_mwn_dp_CV74FMQ2240FRCNT8MYM",
+    "photo": "/assets/imagesLista/escorredor.png",
+    "status": "disponivel",
+    "price": 108.99
+  },
+  {
+    "id": 24,
+    "title": "Conjunto de Utensílios Inox Brinox - Preparo Top Pratic 13 Peças",
+    "link": "https://www.magazineluiza.com.br/conjunto-de-utensilios-inox-brinox-preparo-top-pratic-13-pecas/p/143396700/ud/cjtu/?seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=69736&gclid=CjwKCAjwov6hBhBsEiwAvrvN6MIgYDvykoaS21PtnM-gp1h4K8q--Ehly7zZOuB5epT1h1bqqmwaehoCkuAQAvD_BwE&gclsrc=aw.ds",
+    "photo": "/assets/imagesLista/conjuntoDeUtensilios.png",
+    "status": "disponivel",
+    "price": 75.99
+  },
+  {
+    "id": 25,
+    "title": "Kit 2 Petisqueira De Bambu C/ Divisória C/ 7 Espaços Redonda",
+    "link": "https://www.magazineluiza.com.br/kit-2-petisqueira-de-bambu-c-divisoria-c-7-espacos-redonda-loja-coisaria/p/cggg68370g/ud/peti/",
+    "photo": "/assets/imagesLista/kitpestisqueira.png",
+    "status": "disponivel",
+    "price": 57.89
+  },
+  {
+    "id": 26,
+    "title": "Tabua Corte Carne Churrasco Legumes Servir Madeira Moderna - Churrasqueando",
+    "link": "https://www.magazineluiza.com.br/tabua-corte-carne-churrasco-legumes-servir-madeira-moderna-churrasqueando/p/bcdd9bd96b/ud/tbpc/",
+    "photo": "/assets/imagesLista/tabua.png",
+    "status": "disponivel",
+    "price": 75.99
+  },
+  {
+    "id": 27,
+    "title": "Porta Temperos",
+    "link": "https://www.amazon.com.br/Porta-Temperos-Condimentos-Giratório-Cozinha/dp/B09RNDG9ST/ref=asc_df_B09RNDG9ST/?tag=googleshopp06-20&linkCode=df0&hvadid=379729859262&hvpos=&hvnetw=g&hvrand=14737955642214028582&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9101764&hvtargid=pla-1664932716132&psc=1",
+    "photo": "/assets/imagesLista/portatemperos.png",
+    "status": "disponivel",
+    "price": 84.99
+  },
+  {
+    "id": 28,
+    "title": "Jogo 2 Peças Travesseiro Nasa - Antialergico - Toque Macio - Valenci",
+    "link": "https://www.zoom.com.br/travesseiro/jogo-2-pecas-travesseiro-nasa-antialergico-toque-macio-valencia?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/travesseiro.png",
+    "status": "disponivel",
+    "price": 116.99
+  },
+  {
+    "id": 29,
+    "title": "Jogo de Lençol 3 pçs Ponto Palito Queen Percal 200 Fios 100% Algodão",
+    "link": "https://www.zoom.com.br/lencol-jogo-cama/jogo-de-lencol-3-pcs-ponto-palito-queen-percal-200-fios-100-algodao?utm_source=share&utm_medium=share_web&utm_campaign=share_prod&lc=305",
+    "photo": "/assets/imagesLista/jogodelencol.png",
+    "status": "disponivel",
+    "price": 89.99
+  },
+  {
+    "id": 30,
+    "title": "Jogo De Lençol Casal 03 Peças Percal 400 Fios Macio",
+    "link": "https://www.americanas.com.br/produto/5652766079?cor=Cappuccino&desenho%20do%20tecido=Liso&condition=NEW",
+    "photo": "/assets/imagesLista/jogolencol3pecs.png",
+    "status": "disponivel",
+    "price": 47.99
+  },
+  {
+    "id": 31,
+    "title": "Jogo de cama Casal 6 peças com Edredom e Lençol Casa Dona",
+    "link": "https://www.americanas.com.br/produto/1511106886?cor=Azul%20marinho&condition=NEW",
+    "photo": "/assets/imagesLista/jogolencol6pecs.png",
+    "status": "disponivel",
+    "price": 134.99
+  },
+  {
+    "id": 32,
+    "title": "Jogo De Toalhas Banho E Rosto 4 Peças Zeus Toque Macio Algodão 430g/m2 Trevalla Azul E Rosa",
+    "link": "https://www.americanas.com.br/produto/44551289/jogo-de-toalhas-karsten-4-pecas-banho-e-rosto-algodao-felpuda-otto?cor=Marinho&condition=NEW",
+    "photo": "/assets/imagesLista/jogodeToalhasbanho.png",
+    "status": "disponivel",
+    "price": 79.99
+  }
+]
