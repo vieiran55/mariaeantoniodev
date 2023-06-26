@@ -14,6 +14,12 @@
   &__confirmados{
     @apply text-lg font-bold text-rubi my-4 p-2 self-end;
   }
+  &__botoes{
+    @apply self-start;
+    &__botoes{
+      @apply m-2;
+    }
+  }
 }
 
 .tabela{
@@ -26,5 +32,8 @@
     &__pessoas{
       word-wrap: break-word; max-width: 130px;
     }
+  }
+  .confirmado{
+    @apply fill-green-600;
   }
 }

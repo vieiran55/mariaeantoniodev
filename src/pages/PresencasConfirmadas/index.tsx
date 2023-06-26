@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { IPresencas } from "../../interfaces/IPresencas";
 import { GoVerified } from "react-icons/go";
+import Button from "@mui/material/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PresencasConfirmadas() {
   const [convidados, setConvidados] = useState<IPresencas[]>([]);
@@ -16,6 +18,8 @@ export default function PresencasConfirmadas() {
         console.log(erro);
       });
   }, []);
+
+  const navigate = useNavigate();
 
   const somaQtd = convidados.reduce(
     (acumulador, objeto) => acumulador + objeto.qtd,
@@ -31,6 +35,16 @@ export default function PresencasConfirmadas() {
         </h1>
         <div className={estilos.lista__corpo}>
           <h2 className={estilos.lista__confirmados}>Total de Confirmados: {somaQtd}</h2>
+          <div className={estilos.lista__botoes}>
+            <Button variant="contained"  className={estilos.lista__botoes__botoes}>
+              <Link to={("/")}>
+                Pagina Inicial
+              </Link>
+            </Button>
+            <Button variant="contained" onClick={() => window.location.reload()} className={estilos.lista__botoes__botoes}>
+                Atualizar
+            </Button>
+          </div>
           <table className={estilos.tabela}>
             <thead>
               <tr className={estilos.tabela__head}>
@@ -54,7 +68,9 @@ export default function PresencasConfirmadas() {
                 .map((item, index) => (
                   <tr key={index} className={estilos.tabela__body}>
                     <td className={estilos.tabela__body}>{item.nome}</td>
-                    <td className={estilos.tabela__body__pessoas}>{item.pessoas}</td>
+                    <td className={estilos.tabela__body__pessoas}>{item.pessoas.map((item, index) => (
+                      <p key={index}>{item}</p>
+                    ))}</td>
                     <td className={estilos.tabela__body}>
                       {" "}
                       {item.confirmado && (
