@@ -90,71 +90,70 @@ export default function Presenca() {
           console.error("Erro ao confirmar presença:", error);
         });
 
-      //   const destinatario = email; // Substitua pelo endereço de email desejado
-      //   const casal = "gabrieladourado10@hotmail.com";
-      //   const assunto = "CASAMENTO MAIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
-      //   const corpo = `
-      //     Querido(a) ${nomeSelecionado},
+      const destinatario = email; // Substitua pelo endereço de email desejado
+      const casal = "maira.stefany19@gmail.com";
+      const assunto = "CASAMENTO MAIRA E ANTÔNIO - CONFIRMAÇÃO DE PRESENÇA";
+      const corpo = `
+          Querido(a) ${nomeSelecionado},
 
-      //     Muito obrigado por confirmar sua presença! Você nos surpreendeu e fez nossos corações sorrirem. Você é demais!
+          Muito obrigado por confirmar sua presença!
 
-      //     Com carinho,
-      //     MAIRA E ANTÔNIO
+          Com carinho,
+          MAIRA E ANTÔNIO
 
-      //     ------------------------------
+          ------------------------------
 
-      //     Dados do Cadastro:
+          Dados do Convidado:
 
-      //     - Nome: ${nomeSelecionado}
-      //     - E-mail: ${email}
-      //     - Pessoas que irão com você: ${nomesPessoasAdicionais}
+          - Nome: ${nomeSelecionado}
+          - Pessoas que irão com você: ${nomesPessoasAdicionais}
 
-      //     ------------------------------
+          ------------------------------
 
-      //   `;
+        `;
 
-      //   const corpo2 = `
-      //   PresenÇA Reservada
-      //   ------------------------------
+      const corpo2 = `
+        Presença Confirmada por ${nomeSelecionado}
+        ------------------------------
 
-      //   Dados do Cadastro:
+        Dados do Convidado:
 
-      //   - Nome: ${nomeSelecionado}
-      //   - E-mail: ${email}
-      //   - Pessoas que irão com você: ${nomesPessoasAdicionais}
+        - Nome: ${nomeSelecionado}
+        - E-mail: ${email}
+        - Pessoas que irão com você: ${nomesPessoasAdicionais}
 
-      //   ------------------------------
+        ------------------------------
 
-      // `;
+      `;
 
-      //   axios
-      //     .get("https://cvtrsy.online/enviar-email", {
-      //       params: {
-      //         destinatario: destinatario,
-      //         assunto: assunto,
-      //         corpo: corpo,
-      //       },
-      //     })
-      //     .then((response1) => {
-      //       console.log(response1.data);
-      //       // Lógica adicional após o envio do primeiro email com sucesso
+      axios
+        .get("https://cvtrsy.online/enviar-email", {
+          params: {
+            destinatario: destinatario,
+            assunto: assunto,
+            corpo: corpo,
+          },
+        })
+        .then((response1) => {
+          console.log(response1.data);
+          // Lógica adicional após o envio do primeiro email com sucesso
 
-      //       return axios.get("https://cvtrsy.online/enviar-email", {
-      //         params: {
-      //           destinatario: casal,
-      //           assunto: assunto,
-      //           corpo: corpo2,
-      //         },
-      //       });
-      //     })
-      //     .then((response2) => {
-      //       console.log(response2.data);
-      //       // Lógica adicional após o envio do segundo email com sucesso
-      //     })
-      //     .catch((error) => {
-      //       console.error("Erro ao enviar o email:", error);
-      //       // Lógica de tratamento de erro
-      //     });
+          return axios.get("https://cvtrsy.online/enviar-email", {
+            params: {
+              destinatario: casal,
+              assunto: assunto,
+              corpo: corpo2,
+            },
+          });
+        })
+        .then((response2) => {
+          console.log(response2.data);
+          // Lógica adicional após o envio do segundo email com sucesso
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar o email:", error);
+          // Lógica de tratamento de erro
+        });
     }
   };
 
@@ -320,6 +319,7 @@ export default function Presenca() {
                 <MenuItem value={2}>1 pessoa</MenuItem>
                 <MenuItem value={3}>2 pessoas</MenuItem>
                 <MenuItem value={4}>3 pessoas</MenuItem>
+                <MenuItem value={4}>4 pessoas</MenuItem>
               </Select>
             </FormControl>
             {qtdPessoasAdicionais > 0 && (

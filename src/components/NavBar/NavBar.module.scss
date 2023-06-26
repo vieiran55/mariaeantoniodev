@@ -20,7 +20,7 @@
     font-family: "Michroma", sans-serif;
     @apply w-2/3;
     &__1 {
-      @apply text-verdeLoud font-bold text-2xl;
+      @apply text-rubi font-bold text-2xl;
     }
     &__2 {
       @apply font-bold text-2xl;
@@ -62,7 +62,7 @@
   }
   @apply py-3 px-2;
   &__1 {
-    @apply text-verdeLoud font-bold text-2xl;
+    @apply text-rubi font-bold text-2xl;
   }
   &__2 {
     @apply font-bold text-2xl;
@@ -77,7 +77,7 @@
     @apply flex items-center w-full justify-around text-center;
   }
   &__icon {
-    @apply h-9 w-11;
+    @apply h-9 w-11 text-black;
   }
   &__links {
     @apply flex flex-row items-center w-[140px] justify-around;
@@ -85,7 +85,7 @@
       @apply h-[30px] w-[40px] mx-2;
     }
     &:hover {
-      @apply border-4 border-verdeLoud rounded-md;
+      @apply border-4 border-rubi rounded-md;
     }
   }
   &__linksEmail {
@@ -94,7 +94,7 @@
       @apply h-6 w-6 mx-2;
     }
     &:hover {
-      @apply border-4 border-verdeLoud rounded-md;
+      @apply border-4 border-rubi rounded-md;
     }
   }
 }

@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @apply bg-gold;
+  @apply bg-rubi;
   &__cartaoBotoes{
     @apply absolute flex flex-row w-36;
     @apply flex flex-row items-center justify-between mt-4 ;
@@ -111,8 +111,7 @@
   &__cartaoInferior{
     bottom: -15px;
     left: 28%;
-    background-color: #DAA520; 
-    @apply absolute rounded-lg w-36;
+    @apply absolute rounded-lg w-36 bg-rubi;
     &__text {
       font-family: "Gwendolyn", cursive;
       @apply self-start text-3xl text-black text-center flex flex-col justify-center items-center;
@@ -121,13 +120,13 @@
 }
 
 .sobre{
-  @apply text-center bg-gold animate-fadeinDown;
+  @apply text-center bg-rubi;
   font-family: 'Poppins', cursive;
   @media screen and (min-width: $tablet) {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center justify-around;
   }
   @media screen and (min-width: 1080px) {
-    @apply h-[28rem] items-center;
+    @apply h-[830px] items-center;
   }
   &__titulo{
     font-family: 'Permanent Marker', cursive;
@@ -141,10 +140,10 @@
   }
   &__conteinerTextos{
     @media screen and (min-width: $tablet) {
-      @apply flex;
+      @apply w-[720px] h-[530px] text-black;
     }
     @media screen and (min-width: 1080px) {
-      @apply w-[1000px] h-80;
+      @apply w-[1000px] h-[700px] text-black;;
     }
   }
   &__conteinerTextosEsquerd{
@@ -158,7 +157,16 @@
     } 
   }
   &__texto{
-    @apply text-justify my-4 px-2;
+    @apply text-center my-4 px-2;
+        @media screen and (min-width: 1080px) {
+      @apply text-xl;
+    }
+  }
+  &__textoFinal{
+    @apply text-center mt-6 px-2;
+        @media screen and (min-width: 1080px) {
+      @apply text-xl;
+    }
   }
   &__destaque{
     @apply font-bold;
@@ -166,7 +174,7 @@
 }
 
 .sobre2{
-  @apply text-center bg-gold ;
+  @apply text-center bg-rubi ;
   font-family: 'Poppins', cursive;
   @media screen and (min-width: $tablet) {
     @apply flex flex flex-col items-center;
@@ -186,7 +194,7 @@
   }
   &__conteinerTextos{
     @media screen and (min-width: $tablet) {
-      @apply flex;
+      @apply w-[720px] text-black;
     }
     @media screen and (min-width: 1080px) {
       @apply w-[1000px] h-80;
@@ -215,7 +223,7 @@
   background-image: url("../../images/bgNamesSmall.png");
   background-repeat: repeat;
   background-size: 50%;
-  @apply h-[100vh] flex flex-col items-center justify-center animate-fadeinDown bg-gold ;
+  @apply h-[100vh] flex flex-col items-center justify-center bg-rubi ;
   @media screen and (min-width: 830px) {
     @apply h-[130vh] flex;
   }
@@ -230,7 +238,7 @@
   &__titulo{
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Permanent Marker', cursive;
-    @apply text-center text-gold text-2xl my-6;
+    @apply text-center text-rubi text-2xl my-6;
     @media screen and (min-width: 600px) {
       @apply text-4xl;
     }
@@ -244,19 +252,19 @@
       filter: grayscale(100%);
       @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg;
       @media screen and (min-width: 460px) {
-        @apply h-[20rem] w-[13rem] text-gold;
+        @apply h-[20rem] w-[13rem] text-rubi;
       }
       @media screen and (min-width: 600px) {
-        @apply h-[20rem] w-[18rem] text-gold;
+        @apply h-[20rem] w-[18rem] text-rubi;
       }
       @media screen and (min-width: 830px) {
-        @apply h-[24rem] w-[22rem] text-gold m-3;
+        @apply h-[24rem] w-[22rem] text-rubi m-3;
       }
       @media screen and (min-width: 1080px) {
-        @apply h-[38rem] w-[32rem] text-gold m-3;
+        @apply h-[38rem] w-[32rem] text-rubi m-3;
       }
       @media screen and (min-width: 1600px) {
-        @apply h-[57rem] w-[48rem] text-gold m-3;
+        @apply h-[57rem] w-[48rem] text-rubi m-3;
       }
     }
   }
@@ -270,7 +278,7 @@
   &__titulo{
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Permanent Marker', cursive;
-    @apply text-center text-gold text-2xl my-6 hidden;
+    @apply text-center text-rubi text-2xl my-6 hidden;
   }
   &__fotos{
     @apply flex flex-row justify-around h-[80%] flex-wrap hidden;
@@ -278,10 +286,10 @@
       filter: grayscale(100%);
       @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg hidden;
       @media screen and (min-width: 460px) {
-        @apply h-[20rem] w-[13rem] text-gold hidden;
+        @apply h-[20rem] w-[13rem] text-rubi hidden;
       }
       @media screen and (min-width: 600px) {
-        @apply h-[20rem] w-[18rem] text-gold hidden;
+        @apply h-[20rem] w-[18rem] text-rubi hidden;
       }
     }
   }

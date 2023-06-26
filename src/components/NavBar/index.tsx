@@ -76,7 +76,7 @@ export default function NavBar() {
                 width: "50px",
                 height: "50px",
                 "&:hover": {
-                  backgroundColor: "#333333",
+                  backgroundColor: "#CE633E",
                 },
               }}
             >
@@ -107,40 +107,24 @@ export default function NavBar() {
                         onKeyDown={handleListKeyDown}
                       >
                         <MenuItem onClick={handleClose}>
-                          {" "}
-                          <ScrollLink
-                            to="perfil"
-                            smooth={true}
-                            duration={500}
-                            offset={-70} // Ajuste o valor do deslocamento conforme necessário
-                            className={estilos.navbarLink}
+                          <Link
+                            to={"/presenca"}
+                            className={estilos.mobile__links}
+                            onClick={handleClose}
                           >
-                            <Link
-                              to={"/presenca"}
-                              className={estilos.mobile__links}
-                              onClick={handleClose}
-                            >
-                              Confirmar Presenca
-                            </Link>
-                          </ScrollLink>
+                            Confirmar Presenca
+                          </Link>
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
-                          {" "}
-                          <ScrollLink
-                            to="sobre"
-                            smooth={true}
-                            duration={500}
-                            offset={-70} // Ajuste o valor do deslocamento conforme necessário
-                            className={estilos.navbarLink}
+                          <Link
+                            to={
+                              "https://www.finalfeliz.de/maira-antonio23092023"
+                            }
+                            className={estilos.mobile__links}
+                            onClick={handleClose}
                           >
-                            <Link
-                              to={"/lista"}
-                              className={estilos.mobile__links}
-                              onClick={handleClose}
-                            >
-                              Lista de Presentes
-                            </Link>
-                          </ScrollLink>
+                            Lista de Presentes
+                          </Link>
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
                           {" "}
@@ -191,7 +175,10 @@ export default function NavBar() {
             </Link>
           </li>
           <li className={estilos.conteinerDesktop__opcoes__links}>
-            <Link to={"/lista"} className={estilos.desktop__links}>
+            <Link
+              to={"https://www.finalfeliz.de/maira-antonio23092023"}
+              className={estilos.desktop__links}
+            >
               <ImGift className={estilos.desktop__links__icons} />
               Lista de Presentes
             </Link>
@@ -208,8 +195,6 @@ export default function NavBar() {
                 <BsInfoCircle className={estilos.desktop__links__icons} />
                 Sobre o Casamento
               </div>
-              
-
             </ScrollLink>
           </li>
           <li className={estilos.conteinerDesktop__opcoes__links}>
@@ -221,7 +206,9 @@ export default function NavBar() {
               className={estilos.navbarLink}
             >
               <div onClick={handleClose}>
-                <HiOutlinePhotograph className={estilos.desktop__links__icons} />
+                <HiOutlinePhotograph
+                  className={estilos.desktop__links__icons}
+                />
                 Nossos momentos
               </div>
             </ScrollLink>
