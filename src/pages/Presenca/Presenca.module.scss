@@ -8,17 +8,17 @@
 
 .formulario {
   font-family: "Michroma", sans-serif;
-  background-image: url("../../images/FormaGoldSmall.svg");
+  background-image: url("../../images/FormaRubiSmall.svg");
   background-repeat: no-repeat;
   background-position: top left;
   @media screen and (min-width: 1050px) {
-    background-image: url("../../images/FormaGoldMed.svg"),
-      url("../../images/FormaGoldMedInvert.svg");
+    background-image: url("../../images/Forma1Rubi.svg"),
+      url("../../images/Forma3Rubi.svg");
     background-position: top left, top right;
   }
   @media screen and (min-width: 1400px) {
-    background-image: url("../../images/FormaGold.svg"),
-      url("../../images/FormaGoldInvert.svg");
+    background-image: url("../../images/Forma4Rubi.svg"),
+      url("../../images/Forma5Rubi.svg");
   }
   @apply flex flex-col h-[150vh] items-center w-full;
   &__cabecalho {
@@ -66,12 +66,14 @@
     }
   }
   &__titulo {
-    @apply text-center font-bold text-2xl text-[#D15A7C] mt-16 p-4;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    @apply text-center font-bold text-2xl text-rubi mt-20 p-4;
     @media screen and (min-width: $tablet) {
       @apply text-4xl;
     }
   }
   &__textos {
+    font-family: 'Poppins', cursive;
     @apply text-base m-5 w-[75%] text-center;
   }
   &__opcoes {

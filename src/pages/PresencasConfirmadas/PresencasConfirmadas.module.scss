@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn&family=Poppins&display=swap");
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+.lista{
+  @apply flex flex-col items-center ;
+  &__titulo{
+    font-family: 'Poppins', cursive;
+    @apply text-xl font-bold text-rubi my-10 p-4;
+  }
+  &__corpo{
+   @apply max-w-[500px] flex flex-col items-center
+  }
+  &__confirmados{
+    @apply text-lg font-bold text-rubi my-4 p-2 self-end;
+  }
+}
+
+.tabela{
+  @apply border-collapse text-center;
+  &__head{
+    @apply border-2 border-black;
+  }
+  &__body{
+    @apply border-2 border-black;
+    &__pessoas{
+      word-wrap: break-word; max-width: 130px;
+    }
+  }
+}

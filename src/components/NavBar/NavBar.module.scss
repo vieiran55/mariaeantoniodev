@@ -1,0 +1,127 @@
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+.navbar {
+  @apply w-full;
+  @media screen and (min-width: $desktop_xl) {
+  }
+}
+
+.conteinerDesktop {
+  background-color: rgba(255, 255, 255, 0.5);
+  @apply text-black flex flex-row justify-around py-3 px-2;
+  @media screen and (max-width: $tablet) {
+    @apply justify-between hidden;
+  }
+  &__destaqueTitulo {
+    font-family: "Michroma", sans-serif;
+    @apply w-2/3;
+    &__1 {
+      @apply text-rubi font-bold text-2xl;
+    }
+    &__2 {
+      @apply font-bold text-2xl;
+    }
+  }
+  &__opcoes {
+    @apply flex flex-row  items-center justify-around text-center w-2/6;
+    @media screen and (min-width: $tablet) {
+      @apply w-[475px] justify-between;
+    }
+    @media screen and (min-width: $desktop_md) {
+      @apply w-[720px] justify-between;
+    }
+    &__links {
+      @apply w-full text-lg flex flex-col items-center;
+      &:hover {
+        @apply border-4 border-black rounded-md cursor-pointer;
+      }
+    }
+  }
+  &__sociais {
+    @apply flex flex-row items-center justify-around text-center;
+    @media screen and (min-width: $tablet) {
+      @apply w-2/5;
+      &:hover {
+        @apply cursor-pointer;
+      }
+    }
+    @media screen and (min-width: $desktop_xl) {
+      @apply w-[390px] flex;
+    }
+  }
+}
+
+.destaqueTitulo {
+  font-family: "Michroma", sans-serif;
+  @media screen and (min-width: $tablet) {
+    @apply hidden;
+  }
+  @apply py-3 px-2;
+  &__1 {
+    @apply text-rubi font-bold text-2xl;
+  }
+  &__2 {
+    @apply font-bold text-2xl;
+  }
+}
+.mobile {
+  @apply flex flex-row w-full justify-around;
+  @media screen and (min-width: $tablet) {
+    @apply hidden;
+  }
+  &__sociais {
+    @apply flex items-center w-full justify-around text-center;
+  }
+  &__icon {
+    @apply h-9 w-11 text-black;
+  }
+  &__links {
+    @apply flex flex-row items-center w-[140px] justify-around;
+    &__icons {
+      @apply h-[30px] w-[40px] mx-2;
+    }
+    &:hover {
+      @apply border-4 border-rubi rounded-md;
+    }
+  }
+  &__linksEmail {
+    @apply flex flex-row items-center w-full justify-center;
+    &__icons {
+      @apply h-6 w-6 mx-2;
+    }
+    &:hover {
+      @apply border-4 border-rubi rounded-md;
+    }
+  }
+}
+
+.menu {
+  @apply flex flex-col items-center justify-center;
+}
+
+.entrada__casal {
+  background-image: url("../../images/ramos.png"),
+    url("../../images/aliancas.png");
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  background-size: 60%, 12%;
+  font-family: "Gwendolyn", cursive;
+  @apply h-[5.5rem] flex flex-col items-center justify-center text-center;
+  @media screen and (min-width: $tablet) {
+    @apply h-28;
+  }
+  &__titulo {
+    @apply px-6 text-4xl text-center text-black h-full flex flex-col items-center justify-center;
+    @media screen and (min-width: $tablet) {
+      @apply text-5xl;
+    }
+  }
+}
+
+.desktop__links__icons{
+  @apply flex flex-row items-center justify-center w-full;
+}
