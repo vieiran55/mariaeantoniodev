@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @apply bg-rubi;
+  @apply bg-gold;
   &__cartaoBotoes{
     @apply absolute flex flex-row w-36;
     @apply flex flex-row items-center justify-between mt-4 ;
@@ -111,7 +111,7 @@
   &__cartaoInferior{
     bottom: -15px;
     left: 28%;
-    @apply absolute rounded-lg w-36 bg-rubi;
+    @apply absolute rounded-lg w-36 bg-gold;
     &__text {
       font-family: "Gwendolyn", cursive;
       @apply self-start text-3xl text-black text-center flex flex-col justify-center items-center;
@@ -120,7 +120,7 @@
 }
 
 .sobre{
-  @apply text-center bg-rubi;
+  @apply text-center bg-gold;
   font-family: 'Poppins', cursive;
   @media screen and (min-width: $tablet) {
     @apply flex flex-col items-center justify-around;
@@ -174,7 +174,7 @@
 }
 
 .sobre2{
-  @apply text-center bg-rubi ;
+  @apply text-center bg-gold ;
   font-family: 'Poppins', cursive;
   @media screen and (min-width: $tablet) {
     @apply flex flex flex-col items-center;
@@ -223,7 +223,7 @@
   background-image: url("../../images/bgNamesSmall.png");
   background-repeat: repeat;
   background-size: 50%;
-  @apply h-[100vh] flex flex-col items-center justify-center bg-rubi ;
+  @apply h-[100vh] flex flex-col items-center justify-center bg-gold ;
   @media screen and (min-width: 830px) {
     @apply h-[130vh] flex;
   }
@@ -238,7 +238,7 @@
   &__titulo{
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Permanent Marker', cursive;
-    @apply text-center text-rubi text-2xl my-6;
+    @apply text-center text-gold text-2xl my-6;
     @media screen and (min-width: 600px) {
       @apply text-4xl;
     }
@@ -252,19 +252,19 @@
       filter: grayscale(100%);
       @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg;
       @media screen and (min-width: 460px) {
-        @apply h-[20rem] w-[13rem] text-rubi;
+        @apply h-[20rem] w-[13rem] text-gold ;
       }
       @media screen and (min-width: 600px) {
-        @apply h-[20rem] w-[18rem] text-rubi;
+        @apply h-[20rem] w-[18rem] text-gold ;
       }
       @media screen and (min-width: 830px) {
-        @apply h-[24rem] w-[22rem] text-rubi m-3;
+        @apply h-[24rem] w-[22rem] text-gold  m-3;
       }
       @media screen and (min-width: 1080px) {
-        @apply h-[38rem] w-[32rem] text-rubi m-3;
+        @apply h-[38rem] w-[32rem] text-gold  m-3;
       }
       @media screen and (min-width: 1600px) {
-        @apply h-[57rem] w-[48rem] text-rubi m-3;
+        @apply h-[57rem] w-[48rem] text-gold  m-3;
       }
     }
   }
@@ -278,7 +278,7 @@
   &__titulo{
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Permanent Marker', cursive;
-    @apply text-center text-rubi text-2xl my-6 hidden;
+    @apply text-center text-gold bg-gold text-2xl my-6 hidden;
   }
   &__fotos{
     @apply flex flex-row justify-around h-[80%] flex-wrap hidden;
@@ -286,10 +286,10 @@
       filter: grayscale(100%);
       @apply rounded-tr-[2.5rem] h-64 w-40 shadow-lg hidden;
       @media screen and (min-width: 460px) {
-        @apply h-[20rem] w-[13rem] text-rubi hidden;
+        @apply h-[20rem] w-[13rem] text-gold hidden;
       }
       @media screen and (min-width: 600px) {
-        @apply h-[20rem] w-[18rem] text-rubi hidden;
+        @apply h-[20rem] w-[18rem] text-gold hidden;
       }
     }
   }

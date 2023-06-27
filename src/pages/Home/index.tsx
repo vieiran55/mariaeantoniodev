@@ -92,12 +92,6 @@ export default function Home() {
               Confirmar Presenca
             </Button>
             <p className={estilos.sobre__texto}>
-              Nossa lista será controlada por uma equipe de assessores, contendo
-              apenas os nomes das pessoas confirmadas. De acordo com as normas
-              da portaria do buffet, somente os convidados presentes na lista
-              terão acesso ao evento.
-            </p>
-            <p className={estilos.sobre__texto}>
               Ressaltamos a importância de confirmar sua presença, bem como a
               presença dos membros de sua família que irão acompanhá-lo no dia
               do evento, para que possamos ter um controle adequado. Caso não

@@ -8,17 +8,17 @@
 
 .formulario {
   font-family: "Michroma", sans-serif;
-  background-image: url("../../images/FormaRubiSmall.svg");
+  background-image: url("../../images/FormaGoldSmall.svg");
   background-repeat: no-repeat;
   background-position: top left;
   @media screen and (min-width: 1050px) {
-    background-image: url("../../images/Forma1Rubi.svg"),
-      url("../../images/Forma3Rubi.svg");
+    background-image: url("../../images/FormaGoldMed.svg"),
+      url("../../images/FormaGoldMedInvert.svg");
     background-position: top left, top right;
   }
   @media screen and (min-width: 1400px) {
-    background-image: url("../../images/Forma4Rubi.svg"),
-      url("../../images/Forma5Rubi.svg");
+    background-image: url("../../images/FormaGold.svg"),
+      url("../../images/FormaGoldInvert.svg");
   }
   @apply flex flex-col h-[150vh] items-center w-full;
   &__cabecalho {
