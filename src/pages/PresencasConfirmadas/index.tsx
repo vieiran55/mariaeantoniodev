@@ -26,23 +26,28 @@ export default function PresencasConfirmadas() {
     0
   );
 
-
   return (
     <>
       <div className={estilos.lista}>
-        <h1 className={estilos.lista__titulo}>
-          LISTA DE CONVIDADOS
-        </h1>
+        <h1 className={estilos.lista__titulo}>LISTA DE CONVIDADOS</h1>
+
         <div className={estilos.lista__corpo}>
-          <h2 className={estilos.lista__confirmados}>Total de Confirmados: {somaQtd}</h2>
+          <h2 className={estilos.lista__confirmados}>
+            Total de Confirmados: {somaQtd}
+          </h2>
           <div className={estilos.lista__botoes}>
-            <Button variant="contained"  className={estilos.lista__botoes__botoes}>
-              <Link to={("/")}>
-                Pagina Inicial
-              </Link>
+            <Button
+              variant="contained"
+              className={estilos.lista__botoes__botoes}
+            >
+              <Link to={"/"}>Pagina Inicial</Link>
             </Button>
-            <Button variant="contained" onClick={() => window.location.reload()} className={estilos.lista__botoes__botoes}>
-                Atualizar
+            <Button
+              variant="contained"
+              onClick={() => window.location.reload()}
+              className={estilos.lista__botoes__botoes}
+            >
+              Atualizar
             </Button>
           </div>
           <table className={estilos.tabela}>
@@ -68,9 +73,11 @@ export default function PresencasConfirmadas() {
                 .map((item, index) => (
                   <tr key={index} className={estilos.tabela__body}>
                     <td className={estilos.tabela__body}>{item.nome}</td>
-                    <td className={estilos.tabela__body__pessoas}>{item.pessoas.map((item, index) => (
-                      <p key={index}>{item}</p>
-                    ))}</td>
+                    <td className={estilos.tabela__body__pessoas}>
+                      {item.pessoas.map((item, index) => (
+                        <p key={index}>{item}</p>
+                      ))}
+                    </td>
                     <td className={estilos.tabela__body}>
                       {" "}
                       {item.confirmado && (

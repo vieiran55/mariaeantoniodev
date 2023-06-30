@@ -49,11 +49,11 @@ export default function Presenca() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
+
     axios
       .get<Convidado[]>("https://cvtrsy.online/convidadosma")
       .then((resposta) => {
         setConvidados(resposta.data);
-        console.log(resposta.data);
       })
       .catch((erro) => {
         console.log(erro);

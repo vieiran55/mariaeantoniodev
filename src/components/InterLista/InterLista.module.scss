@@ -1,0 +1,62 @@
+.chamada{
+  background-color: rgba(17, 17, 17, 0.7);
+  @apply absolute w-full h-[100vh] z-50 flex flex-col items-center justify-center animate-fadeinDown;
+  &__conteiner{
+    @apply flex flex-col justify-between h-[550px] w-[360px] border-2 rounded-lg border-black bg-white;
+  }
+  &__close{
+    @apply self-end;
+    &__icon{
+      @apply  h-6 w-8;
+    }
+  }
+  &__areaPix{
+    @apply flex flex-col items-center w-full h-full;
+    &__titulo{
+      @apply text-xl font-bold;
+    }
+    &__conteudo{
+      @apply text-center flex flex-col items-center h-1/2 justify-around;
+    }
+    &__textos{
+      @apply text-lg;
+    }
+    &__botoes{
+      @apply flex flex-row justify-around items-center w-full;
+    }
+  }
+  &__botaoPix{
+    @apply h-8 w-8 self-end my-2 flex flex-col items-center justify-center;
+    &__iconCopiar{
+      @apply w-6 h-6  fill-gray-300;
+    }
+    &__iconColar{
+      @apply w-6 h-6 fill-green-700 ;
+    }
+  }
+  &__botoesConteiner{
+    @apply w-full flex flex-row justify-around items-center my-2;
+  }
+  &__botoes{
+    @apply w-[40%] flex flex-row justify-around items-center;
+  }
+}
+
+.boxTexto{
+  @apply h-full text-justify p-2;
+  &__titulo{
+    @apply text-lg text-center my-2 py-4;
+  }
+  &__descricao{
+    @apply text-justify;
+    &__parag{
+      @apply my-5;
+    }
+    &__destaque{
+      @apply bg-red-600 text-white font-bold mx-2;
+    }
+    &__destaque2{
+      @apply bg-yellow-300 text-black font-bold mx-2;
+    }
+  }
+}

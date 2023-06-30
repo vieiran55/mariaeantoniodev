@@ -18,7 +18,14 @@ import { RiFilePaper2Line } from "react-icons/ri";
 import { BsInfoCircle } from "react-icons/bs";
 import { HiOutlinePhotograph } from "react-icons/hi";
 
-export default function NavBar() {
+interface Props {
+  showAlertList: boolean;
+  setShowAlertList: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function NavBar(props: Props) {
+  const { showAlertList, setShowAlertList } = props;
+
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -108,23 +115,15 @@ export default function NavBar() {
                       >
                         <MenuItem onClick={handleClose}>
                           <Link
-                            to={"/presenca"}
+                            to={"https://form.respondi.app/QNGi0gSF"}
                             className={estilos.mobile__links}
                             onClick={handleClose}
                           >
                             Confirmar Presenca
                           </Link>
                         </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                          <Link
-                            to={
-                              "https://www.finalfeliz.de/maira-antonio23092023"
-                            }
-                            className={estilos.mobile__links}
-                            onClick={handleClose}
-                          >
-                            Lista de Presentes
-                          </Link>
+                        <MenuItem onClick={() => setShowAlertList(true)}>
+                          Lista de Presentes
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
                           {" "}
@@ -169,19 +168,20 @@ export default function NavBar() {
         </div>
         <ol className={estilos.conteinerDesktop__opcoes}>
           <li className={estilos.conteinerDesktop__opcoes__links}>
-            <Link to={"/presenca"} className={estilos.desktop__links}>
+            <Link
+              to={"https://form.respondi.app/QNGi0gSF"}
+              className={estilos.desktop__links}
+            >
               <RiFilePaper2Line className={estilos.desktop__links__icons} />
               Confirmar Presenca
             </Link>
           </li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>
-            <Link
-              to={"https://www.finalfeliz.de/maira-antonio23092023"}
-              className={estilos.desktop__links}
-            >
-              <ImGift className={estilos.desktop__links__icons} />
-              Lista de Presentes
-            </Link>
+          <li
+            className={estilos.conteinerDesktop__opcoes__links}
+            onClick={() => setShowAlertList(true)}
+          >
+            <ImGift className={estilos.desktop__links__icons} />
+            Lista de Presentes
           </li>
           <li className={estilos.conteinerDesktop__opcoes__links}>
             <ScrollLink
