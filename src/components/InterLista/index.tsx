@@ -65,8 +65,7 @@ export default function InterLista(props: Props) {
               <a className={estilos.boxTexto__descricao__destaque}>
                 LISTA DE PRESENTES
               </a>
-              você será direcionado para um site onde poderá comprar o presente
-              e nos entregar pessoalmente💐, mas caso queira nos presentear em
+              você será direcionado para um site onde poderá comprar o presente, mas caso queira nos presentear em
               dinheiro, basta clicar em
               <a className={estilos.boxTexto__descricao__destaque}>
                 PRESENTEAR COM PIX

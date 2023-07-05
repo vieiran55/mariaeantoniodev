@@ -125,7 +125,7 @@ export default function Home() {
                   <p className={estilos.sobre__texto}>
                     Para uma melhor organização, solicitamos que confirme sua
                     presença clicando no link abaixo até o dia
-                    <a className={estilos.sobre__destaque}> XX/XX/XX.</a>
+                    <a className={estilos.sobre__destaque}> 16/09.</a>
                   </p>
                   <Button variant="contained">
                     <Link to={"https://form.respondi.app/QNGi0gSF"}>
