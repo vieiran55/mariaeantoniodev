@@ -27,8 +27,14 @@
   }
   &__botaoPix{
     @apply h-8 w-8 self-end my-2 flex flex-col items-center justify-center;
+    &__conteinerCopiar{
+      @apply flex flex-row justify-around w-24 text-azulMarinho font-bold;
+    }
+    &__conteinerColar{
+      @apply flex flex-row justify-around w-24 text-green-700 font-bold animate-balanco;
+    }
     &__iconCopiar{
-      @apply w-6 h-6  fill-gray-300;
+      @apply w-6 h-6  fill-azulMarinho;
     }
     &__iconColar{
       @apply w-6 h-6 fill-green-700 ;

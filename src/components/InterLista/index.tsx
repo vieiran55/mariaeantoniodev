@@ -6,7 +6,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
-import {HiOutlineClipboardDocumentCheck, HiOutlineClipboardDocument} from "react-icons/hi2";
+import {
+  HiOutlineClipboardDocumentCheck,
+  HiOutlineClipboardDocument,
+} from "react-icons/hi2";
+import {BsFillClipboard2CheckFill, BsFillClipboard2Fill} from "react-icons/bs";
 
 interface Props {
   showAlertList: boolean;
@@ -24,7 +28,6 @@ export default function InterLista(props: Props) {
   const [showPix, setShowPix] = useState(false);
   const [copiadoIcon, setCopiadoIcon] = useState(false);
   const show = true;
-  
 
   const pix = "61996810919";
 
@@ -68,8 +71,8 @@ export default function InterLista(props: Props) {
               <a className={estilos.boxTexto__descricao__destaque}>
                 PRESENTEAR COM PIX
               </a>
-              copiar o código e em seguida fazer o pix no seu aplicativo de banco.
-              Qualquer valor será muito bem utilizado! 🥰
+              copiar o código e em seguida fazer o pix no seu aplicativo de
+              banco. Qualquer valor será muito bem utilizado! 🥰
             </div>
           )}
           {showPix && (
@@ -77,16 +80,29 @@ export default function InterLista(props: Props) {
               <h1 className={estilos.chamada__areaPix__titulo}>Dados do Pix</h1>
               <div className={estilos.chamada__areaPix__conteudo}>
                 <div className={estilos.chamada__areaPix__textos}>
-                Maira Stefany Lopes de Sales Dourado
+                  Maira Stefany Lopes de Sales Dourado
                 </div>
                 <div className={estilos.chamada__areaPix__textos}>
-                Caixa Econômica Federal - Poupança
+                  Caixa Econômica Federal - Poupança
                 </div>
-                <div className={estilos.chamada__areaPix__botoes}> 
-                Pix: {pix}
-                  <button onClick={copiarPix} className={estilos.chamada__botaoPix}> 
-                    {!copiadoIcon && (<HiOutlineClipboardDocument className={estilos.chamada__botaoPix__iconCopiar} />)} 
-                    {copiadoIcon && (<HiOutlineClipboardDocumentCheck className={estilos.chamada__botaoPix__iconColar} />)}
+                <div className={estilos.chamada__areaPix__botoes}>
+                  Pix: {pix}
+                  <button
+                    onClick={copiarPix}
+                    className={estilos.chamada__botaoPix}
+                  >
+                    {!copiadoIcon && (
+                      <div className={estilos.chamada__botaoPix__conteinerCopiar}>
+                        Copiar
+                        <BsFillClipboard2Fill className={estilos.chamada__botaoPix__iconCopiar} />
+                      </div>
+                    )}
+                    {copiadoIcon && (
+                      <div className={estilos.chamada__botaoPix__conteinerColar}>
+                        Copiado!
+                        <BsFillClipboard2CheckFill className={estilos.chamada__botaoPix__iconColar} />
+                      </div>
+                    )}
                   </button>
                 </div>
               </div>
