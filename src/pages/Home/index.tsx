@@ -102,93 +102,95 @@ export default function Home() {
           </div>
         </div>
 
-        {!showAlertList && (<>
-          <div className="bg-gold">
-            <div
-              id="sobre"
-              ref={ref}
-              className={`${inView ? estilos.sobre : estilos.sobre2}`}
-            >
-              <h2 className={estilos.sobre__titulo}>
-                Sua presença é muito importante para nós!
-              </h2>
-              <div className={estilos.sobre__conteinerTextos}>
-                <p className={estilos.sobre__texto}>
-                  Para uma melhor organização, solicitamos que confirme sua
-                  presença clicando no link abaixo até o dia
-                  <a className={estilos.sobre__destaque}> XX/XX/XX.</a>
-                </p>
-                <Button variant="contained">
-                  <Link to={"https://form.respondi.app/QNGi0gSF"}>
-                    Confirmar Presenca
-                  </Link>
-                </Button>
-                <p className={estilos.sobre__texto}>
-                  Ressaltamos a importância de confirmar sua presença, bem como
-                  a presença dos membros de sua família que irão acompanhá-lo no
-                  dia do evento, para que possamos ter um controle adequado.
-                  Caso não seja possível comparecer, compreendemos e esperamos
-                  que possamos marcar um encontro em breve.
-                </p>
-                <p className={estilos.sobre__texto}>
-                  Observação: A ausência de confirmação até a data estipulada
-                  implicará no entendimento de que não comparecerá e resultará
-                  na exclusão de seu nome da lista.
-                </p>
-                <p className={estilos.sobre__texto}>
-                  Além disso, criamos uma lista de presentes com muito amor e
-                  cuidado, contendo itens que nos ajudarão a iniciar nossa nova
-                  jornada juntos. Se desejar nos presentear, você pode acessar
-                  nossa lista de presentes no link abaixo:
-                </p>
-                <Button
-                  variant="contained"
-                  onClick={topo}
-                >
-                  Lista de Presentes
-                </Button>
-                <p className={estilos.sobre__textoFinal}>Com carinho,</p>
-                <p className={estilos.sobre__textoFinal}>
-                  <a className={estilos.sobre__destaque}>MAIRA E ANTÔNIO</a>
-                </p>
+        {!showAlertList && (
+          <>
+            <div className="bg-gold">
+              <div
+                id="sobre"
+                className={estilos.sobre}
+              >
+                <h2 className={estilos.sobre__titulo}>
+                  Sua presença é muito importante para nós!
+                </h2>
+                <div className={estilos.sobre__conteinerTextos}>
+                  <p className={estilos.sobre__textoVersiculo}>
+                    {`"Deus mudou o teu caminho até juntares com o meu e guardou a
+                    tua vida separando-a para mim. Para onde fores, irei. Onde
+                    tu repousares, repousarei. Teu Deus será o meu Deus. Teu
+                    caminho o meu será." (Rute 1:16-17)`}
+                  </p>
+                  <p className={estilos.sobre__texto}>
+                  É com grande satisfação e alegria que convidamos você para celebrar conosco o dia mais importante de nossas vidas: Nosso casamento!
+                  </p>
+                  <p className={estilos.sobre__texto}>
+                    Para uma melhor organização, solicitamos que confirme sua
+                    presença clicando no link abaixo até o dia
+                    <a className={estilos.sobre__destaque}> XX/XX/XX.</a>
+                  </p>
+                  <Button variant="contained">
+                    <Link to={"https://form.respondi.app/QNGi0gSF"}>
+                      Confirmar Presenca
+                    </Link>
+                  </Button>
+                  <p className={estilos.sobre__texto}>
+                    Ressaltamos a importância de confirmar sua presença, bem
+                    como a presença dos membros de sua família que irão
+                    acompanhá-lo no dia do evento, para que possamos ter um
+                    controle adequado. Caso não seja possível comparecer,
+                    compreendemos e esperamos que possamos marcar um encontro em
+                    breve.
+                  </p>
+                  <p className={estilos.sobre__texto}>
+                    Além disso, criamos uma lista de presentes com muito amor e
+                    cuidado, contendo itens que nos ajudarão a iniciar nossa
+                    nova jornada juntos. Se desejar nos presentear, você pode
+                    acessar nossa lista de presentes no link abaixo:
+                  </p>
+                  <Button variant="contained" onClick={topo}>
+                    Lista de Presentes
+                  </Button>
+                  <p className={estilos.sobre__textoFinal}>Com carinho,</p>
+                  <p className={estilos.sobre__textoFinal}>
+                    <a className={estilos.sobre__destaque}>MAIRA E ANTÔNIO</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="bg-gold">
-            <div
-              id="momentos"
-              ref={ref2}
-              className={`${inView2 ? estilos.galeria : estilos.galeria2}`}
-            >
-              <h1 className={estilos.galeria__titulo}>
-                O amor é o laço que nos une para sempre.
-              </h1>
-              <div className={estilos.galeria__fotos}>
-                <img
-                  src={fotoCasal2}
-                  alt={fotoCasal2}
-                  className={estilos.galeria__fotos__images}
-                />
-                <img
-                  src={fotoCasal3}
-                  alt={fotoCasal3}
-                  className={estilos.galeria__fotos__images}
-                />
-                <img
-                  src={fotoCasal1}
-                  alt={fotoCasal1}
-                  className={estilos.galeria__fotos__images}
-                />
-                <img
-                  src={fotoCasal5}
-                  alt={fotoCasal5}
-                  className={estilos.galeria__fotos__images}
-                />
+            <div className="bg-gold">
+              <div
+                id="momentos"
+                className={estilos.galeria}
+              >
+                <h1 className={estilos.galeria__titulo}>
+                  O amor é o laço que nos une para sempre.
+                </h1>
+                <div className={estilos.galeria__fotos}>
+                  <img
+                    src={fotoCasal2}
+                    alt={fotoCasal2}
+                    className={estilos.galeria__fotos__images}
+                  />
+                  <img
+                    src={fotoCasal3}
+                    alt={fotoCasal3}
+                    className={estilos.galeria__fotos__images}
+                  />
+                  <img
+                    src={fotoCasal1}
+                    alt={fotoCasal1}
+                    className={estilos.galeria__fotos__images}
+                  />
+                  <img
+                    src={fotoCasal5}
+                    alt={fotoCasal5}
+                    className={estilos.galeria__fotos__images}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </>)}
+          </>
+        )}
       </div>
     </div>
   );
